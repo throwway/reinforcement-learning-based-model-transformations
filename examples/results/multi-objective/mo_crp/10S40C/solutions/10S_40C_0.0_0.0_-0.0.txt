@@ -1,0 +1,8 @@
+Number of variables: 0
+Number of attributes: 1
+  AggregatedFitness: 0.0
+Number of objectives: 3
+  SolutionLength: 0.0
+  TravelDistance: 0.0
+  NoContainers: -0.0
+Number of constraints: 0

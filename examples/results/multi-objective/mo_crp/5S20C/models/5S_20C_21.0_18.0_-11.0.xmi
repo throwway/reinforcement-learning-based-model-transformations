@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ASCII"?>
+<container:ContainerModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:container="http://momot.big.tuwien.ac.at/examples/icmt/container/1.0" nextContainer="C12" travelDistance="18">
+  <stack id="S1" topContainer="C14" position="1"/>
+  <stack id="S2" topContainer="C16" position="2"/>
+  <stack id="S3" position="3"/>
+  <stack id="S4" topContainer="C12" position="4"/>
+  <stack id="S5" topContainer="C15" position="5"/>
+  <container id="C1" successor="C2"/>
+  <container id="C2" successor="C3"/>
+  <container id="C3" successor="C4"/>
+  <container id="C4" successor="C5"/>
+  <container id="C5" successor="C6"/>
+  <container id="C6" successor="C7"/>
+  <container id="C7" successor="C8"/>
+  <container id="C8" successor="C9"/>
+  <container id="C9" successor="C10"/>
+  <container id="C10" successor="C11"/>
+  <container id="C11" successor="C12"/>
+  <container id="C12" onTopOf="C18" successor="C13" on="S4"/>
+  <container id="C13" successor="C14" on="S5"/>
+  <container id="C14" successor="C15" on="S1"/>
+  <container id="C15" onTopOf="C20" successor="C16" on="S5"/>
+  <container id="C16" onTopOf="C19" successor="C17" on="S2"/>
+  <container id="C17" onTopOf="C13" successor="C18" on="S5"/>
+  <container id="C18" successor="C19" on="S4"/>
+  <container id="C19" successor="C20" on="S2"/>
+  <container id="C20" onTopOf="C17" on="S5"/>
+</container:ContainerModel>

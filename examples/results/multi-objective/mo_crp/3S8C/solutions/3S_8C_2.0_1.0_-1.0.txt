@@ -1,0 +1,50 @@
+Number of variables: 15
+  Variable[0]: -Placeholder-
+
+  Variable[1]: -Placeholder-
+
+  Variable[2]: -Placeholder-
+
+  Variable[3]: -Placeholder-
+
+  Variable[4]: -Placeholder-
+
+  Variable[5]: -Placeholder-
+
+  Variable[6]: -Placeholder-
+
+  Variable[7]: -Placeholder-
+
+  Variable[8]: -Placeholder-
+
+  Variable[9]: -Placeholder-
+
+  Variable[10]: -Placeholder-
+
+  Variable[11]: -Placeholder-
+
+  Variable[12]: Assignment for unit 'RetrieveElseRelocate':
+	Match for rule 'checkIsNotLast':
+	Match for rule 'checkTargetStackNotEmpty':
+- parameter 'container' => 'C7'
+	Match for rule 'relocateNonLastOnStackToNonEmptyStack':
+- parameter 'container' => 'C7'
+- parameter 'from' => 'S3'
+- parameter 'to' => 'S2'
+
+  Variable[13]: Assignment for unit 'RetrieveElseRelocate':
+	Match for rule 'canRetrieveContainer':
+	Match for rule 'retrieveNonLastFromStack':
+- parameter 'container' => 'C1'
+
+  Variable[14]: -Placeholder-
+
+Number of attributes: 3
+  AggregatedFitness: 2.0
+  rank: 0
+  crowdingDistance: 0.6318181818181818
+Number of objectives: 3
+  SolutionLength: 2.0
+  TravelDistance: 1.0
+  NoContainers: -1.0
+Number of constraints: 0

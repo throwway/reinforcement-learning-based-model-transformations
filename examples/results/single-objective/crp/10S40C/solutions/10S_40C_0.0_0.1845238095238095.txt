@@ -1,0 +1,7 @@
+Number of variables: 0
+Number of attributes: 1
+  AggregatedFitness: 0.1845238095238095
+Number of objectives: 2
+  SolutionLength: 0.0
+  ContainerIndex: 0.1845238095238095
+Number of constraints: 0

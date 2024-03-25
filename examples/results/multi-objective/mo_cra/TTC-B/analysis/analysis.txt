@@ -1,0 +1,130 @@
+Tournament-Local10:
+    Hypervolume: 
+        Aggregate: 0.6966031306745298
+        Min: 0.5610877212893085
+        Median: 0.5887804914871643
+        Max: 0.6412633516306552
+        Mean: 0.5920374273070175
+        StandardDeviation: 0.024169688578124283
+        Variance: 5.841738459635114E-4
+        Count: 10
+        Indifferent: [Chebycheff-10, PQ-PO-Local10, PQ-HV-Local10]
+        EffectSize: [
+            - { measure: CohensD, algorithm: Chebycheff-10, effectSize: 0.20296479514239418, magnitude: small }
+            - { measure: CliffsDelta, algorithm: Chebycheff-10, effectSize: 0.14, magnitude: negligible }
+            - { measure: VarghaDelaneyA, algorithm: Chebycheff-10, effectSize: 0.43 }
+            - { measure: CohensD, algorithm: NSGAII-2, effectSize: 2.361895843337647, magnitude: large }
+            - { measure: CliffsDelta, algorithm: NSGAII-2, effectSize: 0.96, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: NSGAII-2, effectSize: 0.98 }
+            - { measure: CohensD, algorithm: PQ-PO-Local10, effectSize: 0.035454785215159476, magnitude: negligible }
+            - { measure: CliffsDelta, algorithm: PQ-PO-Local10, effectSize: 0.06, magnitude: negligible }
+            - { measure: VarghaDelaneyA, algorithm: PQ-PO-Local10, effectSize: 0.47 }
+            - { measure: CohensD, algorithm: PQ-HV-Local10, effectSize: 0.43650632835181263, magnitude: small }
+            - { measure: CliffsDelta, algorithm: PQ-HV-Local10, effectSize: 0.22, magnitude: small }
+            - { measure: VarghaDelaneyA, algorithm: PQ-HV-Local10, effectSize: 0.39 }
+        ]
+        Values: [0.6099845286634902, 0.5800029899739563, 0.610279352416413, 0.5868741045696106, 0.5966699152048245, 0.6412633516306552, 0.5616453290463737, 0.5610877212893085, 0.5818801018708247, 0.5906868784047179]
+Chebycheff-10:
+    Hypervolume: 
+        Aggregate: 0.6745316047510763
+        Min: 0.5614956377269111
+        Median: 0.5905221108545137
+        Max: 0.6316064270334303
+        Mean: 0.59669690799028
+        StandardDeviation: 0.021676760415011476
+        Variance: 4.6988194208980846E-4
+        Count: 10
+        Indifferent: [Tournament-Local10, PQ-PO-Local10, PQ-HV-Local10]
+        EffectSize: [
+            - { measure: CohensD, algorithm: Tournament-Local10, effectSize: 0.20296479514239418, magnitude: small }
+            - { measure: CliffsDelta, algorithm: Tournament-Local10, effectSize: 0.14, magnitude: negligible }
+            - { measure: VarghaDelaneyA, algorithm: Tournament-Local10, effectSize: 0.57 }
+            - { measure: CohensD, algorithm: NSGAII-2, effectSize: 2.523036722132372, magnitude: large }
+            - { measure: CliffsDelta, algorithm: NSGAII-2, effectSize: 0.98, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: NSGAII-2, effectSize: 0.99 }
+            - { measure: CohensD, algorithm: PQ-PO-Local10, effectSize: 0.20598633757307083, magnitude: small }
+            - { measure: CliffsDelta, algorithm: PQ-PO-Local10, effectSize: 0.12, magnitude: negligible }
+            - { measure: VarghaDelaneyA, algorithm: PQ-PO-Local10, effectSize: 0.56 }
+            - { measure: CohensD, algorithm: PQ-HV-Local10, effectSize: 0.23037456968744827, magnitude: small }
+            - { measure: CliffsDelta, algorithm: PQ-HV-Local10, effectSize: 0.16, magnitude: small }
+            - { measure: VarghaDelaneyA, algorithm: PQ-HV-Local10, effectSize: 0.42 }
+        ]
+        Values: [0.5908547574887596, 0.617978583248649, 0.5901894642202677, 0.6238455403401802, 0.5972677324965671, 0.5614956377269111, 0.588762248654772, 0.5781588701750878, 0.6316064270334303, 0.5868098185181745]
+NSGAII-2:
+    Hypervolume: 
+        Aggregate: 0.6147362593083113
+        Min: 0.3973810014660069
+        Median: 0.4910685139603846
+        Max: 0.5655038982457895
+        Mean: 0.497191236744391
+        StandardDeviation: 0.051390311467690325
+        Variance: 0.002640964112746224
+        Count: 10
+        Indifferent: []
+        EffectSize: [
+            - { measure: CohensD, algorithm: Tournament-Local10, effectSize: 2.361895843337647, magnitude: large }
+            - { measure: CliffsDelta, algorithm: Tournament-Local10, effectSize: 0.96, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: Tournament-Local10, effectSize: 0.02 }
+            - { measure: CohensD, algorithm: Chebycheff-10, effectSize: 2.523036722132372, magnitude: large }
+            - { measure: CliffsDelta, algorithm: Chebycheff-10, effectSize: 0.98, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: Chebycheff-10, effectSize: 0.01 }
+            - { measure: CohensD, algorithm: PQ-PO-Local10, effectSize: 2.5100301261775644, magnitude: large }
+            - { measure: CliffsDelta, algorithm: PQ-PO-Local10, effectSize: 1.0, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: PQ-PO-Local10, effectSize: 0.0 }
+            - { measure: CohensD, algorithm: PQ-HV-Local10, effectSize: 2.7124999687341806, magnitude: large }
+            - { measure: CliffsDelta, algorithm: PQ-HV-Local10, effectSize: 1.0, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: PQ-HV-Local10, effectSize: 0.0 }
+        ]
+        Values: [0.5024955749079583, 0.4687975480478229, 0.4796414530128109, 0.4553539362148144, 0.5655038982457895, 0.5492812487852686, 0.3973810014660069, 0.5418101784752418, 0.5322247268821624, 0.479422801406034]
+PQ-PO-Local10:
+    Hypervolume: 
+        Aggregate: 0.6675653883579774
+        Min: 0.5698441569349351
+        Median: 0.593078230867538
+        Max: 0.6191834021912365
+        Mean: 0.5927652888516636
+        StandardDeviation: 0.01608507372538531
+        Variance: 2.5872959675108086E-4
+        Count: 10
+        Indifferent: [Tournament-Local10, Chebycheff-10, PQ-HV-Local10]
+        EffectSize: [
+            - { measure: CohensD, algorithm: Tournament-Local10, effectSize: 0.035454785215159476, magnitude: negligible }
+            - { measure: CliffsDelta, algorithm: Tournament-Local10, effectSize: 0.06, magnitude: negligible }
+            - { measure: VarghaDelaneyA, algorithm: Tournament-Local10, effectSize: 0.53 }
+            - { measure: CohensD, algorithm: Chebycheff-10, effectSize: 0.20598633757307083, magnitude: small }
+            - { measure: CliffsDelta, algorithm: Chebycheff-10, effectSize: 0.12, magnitude: negligible }
+            - { measure: VarghaDelaneyA, algorithm: Chebycheff-10, effectSize: 0.44 }
+            - { measure: CohensD, algorithm: NSGAII-2, effectSize: 2.5100301261775644, magnitude: large }
+            - { measure: CliffsDelta, algorithm: NSGAII-2, effectSize: 1.0, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: NSGAII-2, effectSize: 1.0 }
+            - { measure: CohensD, algorithm: PQ-HV-Local10, effectSize: 0.505467986474714, magnitude: medium }
+            - { measure: CliffsDelta, algorithm: PQ-HV-Local10, effectSize: 0.28, magnitude: small }
+            - { measure: VarghaDelaneyA, algorithm: PQ-HV-Local10, effectSize: 0.36 }
+        ]
+        Values: [0.5964533407883114, 0.5965033755643293, 0.5865441592949838, 0.580057658949306, 0.6105220411231613, 0.6057066986522732, 0.5897031209467645, 0.6191834021912365, 0.5731349340713346, 0.5698441569349351]
+PQ-HV-Local10:
+    Hypervolume: 
+        Aggregate: 0.6857339911325618
+        Min: 0.5785922862489657
+        Median: 0.6026531695409685
+        Max: 0.6329851768589054
+        Mean: 0.6012187731641793
+        StandardDeviation: 0.01733954282969822
+        Variance: 3.0065974554293896E-4
+        Count: 10
+        Indifferent: [Tournament-Local10, Chebycheff-10, PQ-PO-Local10]
+        EffectSize: [
+            - { measure: CohensD, algorithm: Tournament-Local10, effectSize: 0.43650632835181263, magnitude: small }
+            - { measure: CliffsDelta, algorithm: Tournament-Local10, effectSize: 0.22, magnitude: small }
+            - { measure: VarghaDelaneyA, algorithm: Tournament-Local10, effectSize: 0.61 }
+            - { measure: CohensD, algorithm: Chebycheff-10, effectSize: 0.23037456968744827, magnitude: small }
+            - { measure: CliffsDelta, algorithm: Chebycheff-10, effectSize: 0.16, magnitude: small }
+            - { measure: VarghaDelaneyA, algorithm: Chebycheff-10, effectSize: 0.58 }
+            - { measure: CohensD, algorithm: NSGAII-2, effectSize: 2.7124999687341806, magnitude: large }
+            - { measure: CliffsDelta, algorithm: NSGAII-2, effectSize: 1.0, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: NSGAII-2, effectSize: 1.0 }
+            - { measure: CohensD, algorithm: PQ-PO-Local10, effectSize: 0.505467986474714, magnitude: medium }
+            - { measure: CliffsDelta, algorithm: PQ-PO-Local10, effectSize: 0.28, magnitude: small }
+            - { measure: VarghaDelaneyA, algorithm: PQ-PO-Local10, effectSize: 0.64 }
+        ]
+        Values: [0.5785922862489657, 0.5898884113260146, 0.6329851768589054, 0.6209776231896043, 0.6085708974364312, 0.5893532372238045, 0.6063018243972751, 0.6026226786735654, 0.5802119358788544, 0.6026836604083715]

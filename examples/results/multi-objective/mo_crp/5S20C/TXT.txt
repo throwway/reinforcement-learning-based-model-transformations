@@ -1,0 +1,567 @@
+Search started.
+-------------------------------------------------------
+Search
+-------------------------------------------------------
+InputModel:      model/5S_20C.xmi
+Objectives:      [SolutionLength, TravelDistance, NoContainers]
+NrObjectives:    3
+Constraints:     []
+NrConstraints:   0
+Transformations: [transformations/container.henshin]
+Units:           [ConditionalUnit RetrieveElseRelocate(container, from, to)]
+SolutionLength:  50
+PopulationSize:  100
+Iterations:      100
+MaxEvaluations:  10000
+AlgorithmRuns:   10
+---------------------------
+Run 'Chebycheff' 10 times...
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by at.ac.tuwien.big.moea.experiment.instrumenter.SearchInstrumenter (file:/home/martin/Desktop/projects/jku/momot-experimental/MOMoT-RL/plugins/at.ac.tuwien.big.moea/target/classes/) to field java.util.AbstractCollection.MAX_ARRAY_SIZE
+WARNING: Please consider reporting this to the maintainers of at.ac.tuwien.big.moea.experiment.instrumenter.SearchInstrumenter
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[02:26:19.810] Run 1 of 10 started.
+[02:27:18.045] Run 1 of 10 terminated after 00:00:58.233 (58233 ms).
+[02:27:18.046] Run 2 of 10 started.
+[02:28:16.584] Run 2 of 10 terminated after 00:00:58.538 (58538 ms).
+[02:28:16.585] Run 3 of 10 started.
+[02:29:15.340] Run 3 of 10 terminated after 00:00:58.755 (58755 ms).
+[02:29:15.340] Run 4 of 10 started.
+[02:30:13.843] Run 4 of 10 terminated after 00:00:58.502 (58502 ms).
+[02:30:13.843] Run 5 of 10 started.
+[02:31:12.740] Run 5 of 10 terminated after 00:00:58.896 (58896 ms).
+[02:31:12.740] Run 6 of 10 started.
+[02:32:11.428] Run 6 of 10 terminated after 00:00:58.688 (58688 ms).
+[02:32:11.429] Run 7 of 10 started.
+[02:33:08.769] Run 7 of 10 terminated after 00:00:57.340 (57340 ms).
+[02:33:08.770] Run 8 of 10 started.
+[02:34:05.815] Run 8 of 10 terminated after 00:00:57.045 (57045 ms).
+[02:34:05.815] Run 9 of 10 started.
+[02:35:03.240] Run 9 of 10 terminated after 00:00:57.424 (57424 ms).
+[02:35:03.240] Run 10 of 10 started.
+[02:36:02.114] Run 10 of 10 terminated after 00:00:58.873 (58873 ms).
+[02:36:02.114] Total runtime for 10 seeds: 00:09:42.304 (582304 ms).
+Run 'PQ-HV' 10 times...
+[02:36:02.119] Run 1 of 10 started.
+02:36:02.161 [main] WARN org.nd4j.linalg.factory.Nd4jBackend - Skipped [JCublasBackend] backend (unavailable): java.lang.ClassNotFoundException: org.bytedeco.cuda.global.cudart
+02:36:02.167 [main] INFO org.nd4j.linalg.factory.Nd4jBackend - Loaded [CpuBackend] backend
+02:36:02.581 [main] INFO org.nd4j.nativeblas.NativeOpsHolder - Number of threads used for linear algebra: 8
+02:36:02.582 [main] WARN org.nd4j.linalg.cpu.nativecpu.CpuNDArrayFactory - *********************************** CPU Feature Check Warning ***********************************
+02:36:02.582 [main] WARN org.nd4j.linalg.cpu.nativecpu.CpuNDArrayFactory - Warning: Initializing ND4J with Generic x86 binary on a CPU with AVX/AVX2 support
+02:36:02.582 [main] WARN org.nd4j.linalg.cpu.nativecpu.CpuNDArrayFactory - Using ND4J with AVX/AVX2 will improve performance. See deeplearning4j.org/cpu for more details
+02:36:02.582 [main] WARN org.nd4j.linalg.cpu.nativecpu.CpuNDArrayFactory - Or set environment variable ND4J_IGNORE_AVX=true to suppress this warning
+02:36:02.582 [main] WARN org.nd4j.linalg.cpu.nativecpu.CpuNDArrayFactory - *************************************************************************************************
+02:36:02.614 [main] INFO org.nd4j.nativeblas.Nd4jBlas - Number of threads used for OpenMP BLAS: 8
+02:36:02.617 [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Backend used: [CPU]; OS: [Linux]
+02:36:02.617 [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Cores: [16]; Memory: [12.0GB];
+02:36:02.617 [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Blas vendor: [OPENBLAS]
+[02:37:01.101] Run 1 of 10 terminated after 00:00:58.982 (58982 ms).
+[02:37:01.102] Run 2 of 10 started.
+[02:37:59.796] Run 2 of 10 terminated after 00:00:58.694 (58694 ms).
+[02:37:59.797] Run 3 of 10 started.
+[02:38:59.022] Run 3 of 10 terminated after 00:00:59.225 (59225 ms).
+[02:38:59.023] Run 4 of 10 started.
+[02:39:57.548] Run 4 of 10 terminated after 00:00:58.524 (58524 ms).
+[02:39:57.548] Run 5 of 10 started.
+[02:40:56.869] Run 5 of 10 terminated after 00:00:59.320 (59320 ms).
+[02:40:56.869] Run 6 of 10 started.
+[02:41:55.732] Run 6 of 10 terminated after 00:00:58.863 (58863 ms).
+[02:41:55.733] Run 7 of 10 started.
+[02:42:53.209] Run 7 of 10 terminated after 00:00:57.476 (57476 ms).
+[02:42:53.209] Run 8 of 10 started.
+[02:43:51.122] Run 8 of 10 terminated after 00:00:57.912 (57912 ms).
+[02:43:51.122] Run 9 of 10 started.
+[02:44:48.920] Run 9 of 10 terminated after 00:00:57.797 (57797 ms).
+[02:44:48.921] Run 10 of 10 started.
+[02:45:45.512] Run 10 of 10 terminated after 00:00:56.591 (56591 ms).
+[02:45:45.512] Total runtime for 10 seeds: 00:09:43.393 (583393 ms).
+Run 'PQ-PO' 10 times...
+[02:45:45.513] Run 1 of 10 started.
+[02:46:41.905] Run 1 of 10 terminated after 00:00:56.392 (56392 ms).
+[02:46:41.905] Run 2 of 10 started.
+[02:47:38.121] Run 2 of 10 terminated after 00:00:56.215 (56215 ms).
+[02:47:38.121] Run 3 of 10 started.
+[02:48:34.232] Run 3 of 10 terminated after 00:00:56.110 (56110 ms).
+[02:48:34.232] Run 4 of 10 started.
+[02:49:31.522] Run 4 of 10 terminated after 00:00:57.288 (57288 ms).
+[02:49:31.522] Run 5 of 10 started.
+[02:50:27.950] Run 5 of 10 terminated after 00:00:56.427 (56427 ms).
+[02:50:27.950] Run 6 of 10 started.
+[02:51:26.259] Run 6 of 10 terminated after 00:00:58.308 (58308 ms).
+[02:51:26.259] Run 7 of 10 started.
+[02:52:26.770] Run 7 of 10 terminated after 00:01:00.511 (60511 ms).
+[02:52:26.770] Run 8 of 10 started.
+[02:53:25.100] Run 8 of 10 terminated after 00:00:58.329 (58329 ms).
+[02:53:25.100] Run 9 of 10 started.
+[02:54:21.794] Run 9 of 10 terminated after 00:00:56.693 (56693 ms).
+[02:54:21.794] Run 10 of 10 started.
+[02:55:19.512] Run 10 of 10 terminated after 00:00:57.717 (57717 ms).
+[02:55:19.512] Total runtime for 10 seeds: 00:09:33.999 (573999 ms).
+Run 'Tournament' 10 times...
+[02:55:19.514] Run 1 of 10 started.
+[02:56:19.777] Run 1 of 10 terminated after 00:01:00.262 (60262 ms).
+[02:56:19.778] Run 2 of 10 started.
+[02:57:19.264] Run 2 of 10 terminated after 00:00:59.486 (59486 ms).
+[02:57:19.264] Run 3 of 10 started.
+[02:58:18.502] Run 3 of 10 terminated after 00:00:59.237 (59237 ms).
+[02:58:18.502] Run 4 of 10 started.
+[02:59:16.376] Run 4 of 10 terminated after 00:00:57.874 (57874 ms).
+[02:59:16.377] Run 5 of 10 started.
+[03:00:13.415] Run 5 of 10 terminated after 00:00:57.037 (57037 ms).
+[03:00:13.415] Run 6 of 10 started.
+[03:01:11.507] Run 6 of 10 terminated after 00:00:58.092 (58092 ms).
+[03:01:11.507] Run 7 of 10 started.
+[03:02:09.687] Run 7 of 10 terminated after 00:00:58.179 (58179 ms).
+[03:02:09.687] Run 8 of 10 started.
+[03:03:07.969] Run 8 of 10 terminated after 00:00:58.282 (58282 ms).
+[03:03:07.969] Run 9 of 10 started.
+[03:04:06.599] Run 9 of 10 terminated after 00:00:58.629 (58629 ms).
+[03:04:06.599] Run 10 of 10 started.
+[03:05:06.258] Run 10 of 10 terminated after 00:00:59.658 (59658 ms).
+[03:05:06.258] Total runtime for 10 seeds: 00:09:46.743 (586743 ms).
+Run 'NSGAII-2' 10 times...
+[03:05:06.761] Run 1 of 10 started.
+[03:05:41.183] Run 1 of 10 terminated after 00:00:34.421 (34421 ms).
+[03:05:41.183] Run 2 of 10 started.
+[03:06:16.379] Run 2 of 10 terminated after 00:00:35.195 (35195 ms).
+[03:06:16.379] Run 3 of 10 started.
+[03:06:51.177] Run 3 of 10 terminated after 00:00:34.797 (34797 ms).
+[03:06:51.177] Run 4 of 10 started.
+[03:07:25.966] Run 4 of 10 terminated after 00:00:34.789 (34789 ms).
+[03:07:25.966] Run 5 of 10 started.
+[03:08:00.373] Run 5 of 10 terminated after 00:00:34.406 (34406 ms).
+[03:08:00.374] Run 6 of 10 started.
+[03:08:34.439] Run 6 of 10 terminated after 00:00:34.065 (34065 ms).
+[03:08:34.439] Run 7 of 10 started.
+[03:09:10.066] Run 7 of 10 terminated after 00:00:35.626 (35626 ms).
+[03:09:10.066] Run 8 of 10 started.
+[03:09:46.582] Run 8 of 10 terminated after 00:00:36.515 (36515 ms).
+[03:09:46.582] Run 9 of 10 started.
+[03:10:20.810] Run 9 of 10 terminated after 00:00:34.227 (34227 ms).
+[03:10:20.810] Run 10 of 10 started.
+[03:10:58.110] Run 10 of 10 terminated after 00:00:37.300 (37300 ms).
+[03:10:58.111] Total runtime for 10 seeds: 00:05:51.349 (351349 ms).
+-------------------------------------------------------
+Analysis
+-------------------------------------------------------
+---------------------------
+Analysis Results
+---------------------------
+Chebycheff:
+    Hypervolume: 
+        Aggregate: 0.3347808105872623
+        Min: 0.23688999172870143
+        Median: 0.25318444995864353
+        Max: 0.32911497105045495
+        Mean: 0.26623242349048803
+        StandardDeviation: 0.03115588499755341
+        Variance: 9.706891699807735E-4
+        Count: 10
+        Indifferent: [PQ-HV, PQ-PO, Tournament]
+        EffectSize: [
+            - { measure: CohensD, algorithm: PQ-HV, effectSize: 0.37259758823376876, magnitude: small }
+            - { measure: CliffsDelta, algorithm: PQ-HV, effectSize: 0.16, magnitude: small }
+            - { measure: VarghaDelaneyA, algorithm: PQ-HV, effectSize: 0.58 }
+            - { measure: CohensD, algorithm: PQ-PO, effectSize: 0.8186201157982764, magnitude: large }
+            - { measure: CliffsDelta, algorithm: PQ-PO, effectSize: 0.38, magnitude: medium }
+            - { measure: VarghaDelaneyA, algorithm: PQ-PO, effectSize: 0.69 }
+            - { measure: CohensD, algorithm: NSGAII-2, effectSize: 5.578275260385727, magnitude: large }
+            - { measure: CliffsDelta, algorithm: NSGAII-2, effectSize: 1.0, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: NSGAII-2, effectSize: 1.0 }
+            - { measure: CohensD, algorithm: Tournament, effectSize: 0.16123897216798228, magnitude: negligible }
+            - { measure: CliffsDelta, algorithm: Tournament, effectSize: 0.32, magnitude: small }
+            - { measure: VarghaDelaneyA, algorithm: Tournament, effectSize: 0.34 }
+        ]
+        Values: [0.2647642679900745, 0.31484698097601327, 0.24979321753515304, 0.2553349875930521, 0.27071960297766756, 0.23688999172870143, 0.24313482216708027, 0.32911497105045495, 0.25103391232423494, 0.24669148056244833]
+    GenerationalDistance: 
+        Aggregate: 0.03482670422103442
+        Min: 0.02831455754823507
+        Median: 0.12480123714336319
+        Max: 0.18506850653410015
+        Mean: 0.11720077029005538
+        StandardDeviation: 0.049633638718500725
+        Variance: 0.0024634980924386546
+        Count: 10
+        Indifferent: [PQ-HV, PQ-PO, NSGAII-2, Tournament]
+        EffectSize: [
+            - { measure: CohensD, algorithm: PQ-HV, effectSize: 0.5601593298884079, magnitude: medium }
+            - { measure: CliffsDelta, algorithm: PQ-HV, effectSize: 0.34, magnitude: medium }
+            - { measure: VarghaDelaneyA, algorithm: PQ-HV, effectSize: 0.33 }
+            - { measure: CohensD, algorithm: PQ-PO, effectSize: 0.4017354492347327, magnitude: small }
+            - { measure: CliffsDelta, algorithm: PQ-PO, effectSize: 0.22, magnitude: small }
+            - { measure: VarghaDelaneyA, algorithm: PQ-PO, effectSize: 0.39 }
+            - { measure: CohensD, algorithm: NSGAII-2, effectSize: 0.26849960795508676, magnitude: small }
+            - { measure: CliffsDelta, algorithm: NSGAII-2, effectSize: 0.12, magnitude: negligible }
+            - { measure: VarghaDelaneyA, algorithm: NSGAII-2, effectSize: 0.44 }
+            - { measure: CohensD, algorithm: Tournament, effectSize: 0.299806654627309, magnitude: small }
+            - { measure: CliffsDelta, algorithm: Tournament, effectSize: 0.12, magnitude: negligible }
+            - { measure: VarghaDelaneyA, algorithm: Tournament, effectSize: 0.56 }
+        ]
+        Values: [0.14055607892017769, 0.07762328446415445, 0.1090463953665487, 0.14247783436803635, 0.08504135633766596, 0.1483162846786283, 0.1758499214763334, 0.02831455754823507, 0.07971348320667374, 0.18506850653410015]
+PQ-HV:
+    Hypervolume: 
+        Aggregate: 0.3192307692307692
+        Min: 0.22700578990901574
+        Median: 0.2502688172043011
+        Max: 0.3174524400330852
+        Mean: 0.2558974358974359
+        StandardDeviation: 0.023834158290832352
+        Variance: 5.680671014324525E-4
+        Count: 10
+        Indifferent: [Chebycheff, PQ-PO, Tournament]
+        EffectSize: [
+            - { measure: CohensD, algorithm: Chebycheff, effectSize: 0.37259758823376876, magnitude: small }
+            - { measure: CliffsDelta, algorithm: Chebycheff, effectSize: 0.16, magnitude: small }
+            - { measure: VarghaDelaneyA, algorithm: Chebycheff, effectSize: 0.42 }
+            - { measure: CohensD, algorithm: PQ-PO, effectSize: 0.46133841340030424, magnitude: small }
+            - { measure: CliffsDelta, algorithm: PQ-PO, effectSize: 0.27, magnitude: small }
+            - { measure: VarghaDelaneyA, algorithm: PQ-PO, effectSize: 0.635 }
+            - { measure: CohensD, algorithm: NSGAII-2, effectSize: 5.870599808681446, magnitude: large }
+            - { measure: CliffsDelta, algorithm: NSGAII-2, effectSize: 1.0, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: NSGAII-2, effectSize: 1.0 }
+            - { measure: CohensD, algorithm: Tournament, effectSize: 0.6934298316695854, magnitude: medium }
+            - { measure: CliffsDelta, algorithm: Tournament, effectSize: 0.6, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: Tournament, effectSize: 0.2 }
+        ]
+        Values: [0.2593465674110836, 0.24913151364764272, 0.23879239040529365, 0.24913151364764272, 0.24913151364764272, 0.25140612076095953, 0.25653432588916464, 0.3174524400330852, 0.22700578990901574, 0.2610421836228288]
+    GenerationalDistance: 
+        Aggregate: 0.09350832122477143
+        Min: 0.011827853028557555
+        Median: 0.15069511409144387
+        Max: 0.23905304407202457
+        Mean: 0.15132943881235714
+        StandardDeviation: 0.07043174996317342
+        Variance: 0.004960631402874979
+        Count: 10
+        Indifferent: [Chebycheff, PQ-PO, NSGAII-2, Tournament]
+        EffectSize: [
+            - { measure: CohensD, algorithm: Chebycheff, effectSize: 0.5601593298884079, magnitude: medium }
+            - { measure: CliffsDelta, algorithm: Chebycheff, effectSize: 0.34, magnitude: medium }
+            - { measure: VarghaDelaneyA, algorithm: Chebycheff, effectSize: 0.67 }
+            - { measure: CohensD, algorithm: PQ-PO, effectSize: 0.2805595272658699, magnitude: small }
+            - { measure: CliffsDelta, algorithm: PQ-PO, effectSize: 0.22, magnitude: small }
+            - { measure: VarghaDelaneyA, algorithm: PQ-PO, effectSize: 0.61 }
+            - { measure: CohensD, algorithm: NSGAII-2, effectSize: 0.43002287824665075, magnitude: small }
+            - { measure: CliffsDelta, algorithm: NSGAII-2, effectSize: 0.24, magnitude: small }
+            - { measure: VarghaDelaneyA, algorithm: NSGAII-2, effectSize: 0.62 }
+            - { measure: CohensD, algorithm: Tournament, effectSize: 0.8343165246362794, magnitude: large }
+            - { measure: CliffsDelta, algorithm: Tournament, effectSize: 0.48, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: Tournament, effectSize: 0.74 }
+        ]
+        Values: [0.11031328431129929, 0.1060849777068044, 0.17941876833469306, 0.2263471563706434, 0.22032192103351622, 0.23905304407202457, 0.1185371550831451, 0.011827853028557555, 0.12324148511863647, 0.17814874306425124]
+PQ-PO:
+    Hypervolume: 
+        Aggregate: 0.2640198511166253
+        Min: 0.24019851116625315
+        Median: 0.24913151364764272
+        Max: 0.2560794044665013
+        Mean: 0.24791563275434247
+        StandardDeviation: 0.005532647660887739
+        Variance: 3.0610190139526574E-5
+        Count: 10
+        Indifferent: [Chebycheff, PQ-HV]
+        EffectSize: [
+            - { measure: CohensD, algorithm: Chebycheff, effectSize: 0.8186201157982764, magnitude: large }
+            - { measure: CliffsDelta, algorithm: Chebycheff, effectSize: 0.38, magnitude: medium }
+            - { measure: VarghaDelaneyA, algorithm: Chebycheff, effectSize: 0.31 }
+            - { measure: CohensD, algorithm: PQ-HV, effectSize: 0.46133841340030424, magnitude: small }
+            - { measure: CliffsDelta, algorithm: PQ-HV, effectSize: 0.27, magnitude: small }
+            - { measure: VarghaDelaneyA, algorithm: PQ-HV, effectSize: 0.365 }
+            - { measure: CohensD, algorithm: NSGAII-2, effectSize: 6.840879674099141, magnitude: large }
+            - { measure: CliffsDelta, algorithm: NSGAII-2, effectSize: 1.0, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: NSGAII-2, effectSize: 1.0 }
+            - { measure: CohensD, algorithm: Tournament, effectSize: 1.7586749657880754, magnitude: large }
+            - { measure: CliffsDelta, algorithm: Tournament, effectSize: 0.88, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: Tournament, effectSize: 0.06 }
+        ]
+        Values: [0.24913151364764272, 0.24913151364764272, 0.24119106699751863, 0.25405293631100084, 0.2514888337468983, 0.24784946236559144, 0.2560794044665013, 0.24019851116625315, 0.24090157154673286, 0.24913151364764272]
+    GenerationalDistance: 
+        Aggregate: 0.0639417296581676
+        Min: 0.06844162475585272
+        Median: 0.1374523030763839
+        Max: 0.19858798953631132
+        Mean: 0.13527779040312662
+        StandardDeviation: 0.03982486931183995
+        Variance: 0.0015860202157051311
+        Count: 10
+        Indifferent: [Chebycheff, PQ-HV, NSGAII-2, Tournament]
+        EffectSize: [
+            - { measure: CohensD, algorithm: Chebycheff, effectSize: 0.4017354492347327, magnitude: small }
+            - { measure: CliffsDelta, algorithm: Chebycheff, effectSize: 0.22, magnitude: small }
+            - { measure: VarghaDelaneyA, algorithm: Chebycheff, effectSize: 0.61 }
+            - { measure: CohensD, algorithm: PQ-HV, effectSize: 0.2805595272658699, magnitude: small }
+            - { measure: CliffsDelta, algorithm: PQ-HV, effectSize: 0.22, magnitude: small }
+            - { measure: VarghaDelaneyA, algorithm: PQ-HV, effectSize: 0.39 }
+            - { measure: CohensD, algorithm: NSGAII-2, effectSize: 0.204300936683994, magnitude: small }
+            - { measure: CliffsDelta, algorithm: NSGAII-2, effectSize: 0.14, magnitude: negligible }
+            - { measure: VarghaDelaneyA, algorithm: NSGAII-2, effectSize: 0.57 }
+            - { measure: CohensD, algorithm: Tournament, effectSize: 0.7975322776862451, magnitude: medium }
+            - { measure: CliffsDelta, algorithm: Tournament, effectSize: 0.46, magnitude: medium }
+            - { measure: VarghaDelaneyA, algorithm: Tournament, effectSize: 0.73 }
+        ]
+        Values: [0.11181946428372672, 0.17659217678174774, 0.09850563310349796, 0.19858798953631132, 0.12697402442183428, 0.15368393534094277, 0.14793058173093349, 0.06844162475585272, 0.16359652108206932, 0.10664595299435006]
+NSGAII-2:
+    Hypervolume: 
+        Aggregate: 0.1529776674937965
+        Min: 0.02009925558312655
+        Median: 0.09423076923076923
+        Max: 0.132258064516129
+        Mean: 0.08894954507857733
+        StandardDeviation: 0.03239395309309341
+        Variance: 0.001049368196997536
+        Count: 10
+        Indifferent: []
+        EffectSize: [
+            - { measure: CohensD, algorithm: Chebycheff, effectSize: 5.578275260385727, magnitude: large }
+            - { measure: CliffsDelta, algorithm: Chebycheff, effectSize: 1.0, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: Chebycheff, effectSize: 0.0 }
+            - { measure: CohensD, algorithm: PQ-HV, effectSize: 5.870599808681446, magnitude: large }
+            - { measure: CliffsDelta, algorithm: PQ-HV, effectSize: 1.0, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: PQ-HV, effectSize: 0.0 }
+            - { measure: CohensD, algorithm: PQ-PO, effectSize: 6.840879674099141, magnitude: large }
+            - { measure: CliffsDelta, algorithm: PQ-PO, effectSize: 1.0, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: PQ-PO, effectSize: 0.0 }
+            - { measure: CohensD, algorithm: Tournament, effectSize: 6.999512915254806, magnitude: large }
+            - { measure: CliffsDelta, algorithm: Tournament, effectSize: 1.0, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: Tournament, effectSize: 0.0 }
+        ]
+        Values: [0.12671629445822996, 0.06464019851116626, 0.132258064516129, 0.08411910669975187, 0.10583126550868485, 0.09602977667493799, 0.06980976013234078, 0.02009925558312655, 0.09755996691480563, 0.09243176178660047]
+    GenerationalDistance: 
+        Aggregate: 0.039492287953942336
+        Min: 0.08317365238785622
+        Median: 0.13598151105151368
+        Max: 0.1695176186088133
+        Mean: 0.12813916445754617
+        StandardDeviation: 0.029254525366639864
+        Variance: 8.558272544273752E-4
+        Count: 10
+        Indifferent: [Chebycheff, PQ-HV, PQ-PO, Tournament]
+        EffectSize: [
+            - { measure: CohensD, algorithm: Chebycheff, effectSize: 0.26849960795508676, magnitude: small }
+            - { measure: CliffsDelta, algorithm: Chebycheff, effectSize: 0.12, magnitude: negligible }
+            - { measure: VarghaDelaneyA, algorithm: Chebycheff, effectSize: 0.56 }
+            - { measure: CohensD, algorithm: PQ-HV, effectSize: 0.43002287824665075, magnitude: small }
+            - { measure: CliffsDelta, algorithm: PQ-HV, effectSize: 0.24, magnitude: small }
+            - { measure: VarghaDelaneyA, algorithm: PQ-HV, effectSize: 0.38 }
+            - { measure: CohensD, algorithm: PQ-PO, effectSize: 0.204300936683994, magnitude: small }
+            - { measure: CliffsDelta, algorithm: PQ-PO, effectSize: 0.14, magnitude: negligible }
+            - { measure: VarghaDelaneyA, algorithm: PQ-PO, effectSize: 0.43 }
+            - { measure: CohensD, algorithm: Tournament, effectSize: 0.7047587590530989, magnitude: medium }
+            - { measure: CliffsDelta, algorithm: Tournament, effectSize: 0.32, magnitude: small }
+            - { measure: VarghaDelaneyA, algorithm: Tournament, effectSize: 0.66 }
+        ]
+        Values: [0.13648364359068788, 0.1695176186088133, 0.08317365238785622, 0.1528565641619583, 0.12469618489000227, 0.13547937851233946, 0.15123852665053927, 0.14104503754950173, 0.08585735805862854, 0.10104368016513471]
+Tournament:
+    Hypervolume: 
+        Aggregate: 0.31232423490488004
+        Min: 0.2524813895781638
+        Median: 0.26501240694789086
+        Max: 0.2944582299421009
+        Mean: 0.2702853598014889
+        StandardDeviation: 0.01711632892451525
+        Variance: 2.929687158521973E-4
+        Count: 10
+        Indifferent: [Chebycheff, PQ-HV]
+        EffectSize: [
+            - { measure: CohensD, algorithm: Chebycheff, effectSize: 0.16123897216798228, magnitude: negligible }
+            - { measure: CliffsDelta, algorithm: Chebycheff, effectSize: 0.32, magnitude: small }
+            - { measure: VarghaDelaneyA, algorithm: Chebycheff, effectSize: 0.66 }
+            - { measure: CohensD, algorithm: PQ-HV, effectSize: 0.6934298316695854, magnitude: medium }
+            - { measure: CliffsDelta, algorithm: PQ-HV, effectSize: 0.6, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: PQ-HV, effectSize: 0.8 }
+            - { measure: CohensD, algorithm: PQ-PO, effectSize: 1.7586749657880754, magnitude: large }
+            - { measure: CliffsDelta, algorithm: PQ-PO, effectSize: 0.88, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: PQ-PO, effectSize: 0.94 }
+            - { measure: CohensD, algorithm: NSGAII-2, effectSize: 6.999512915254806, magnitude: large }
+            - { measure: CliffsDelta, algorithm: NSGAII-2, effectSize: 1.0, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: NSGAII-2, effectSize: 1.0 }
+        ]
+        Values: [0.26443341604631926, 0.2930521091811415, 0.26054590570719605, 0.2923076923076923, 0.2524813895781638, 0.2655913978494624, 0.2732423490488007, 0.2533498759305211, 0.25339123242349054, 0.2944582299421009]
+    GenerationalDistance: 
+        Aggregate: 0.013563219077051726
+        Min: 0.029868902834607677
+        Median: 0.0981551899329011
+        Max: 0.1551664660749245
+        Mean: 0.10380690540118531
+        StandardDeviation: 0.039092386769762635
+        Variance: 0.001528214703356713
+        Count: 10
+        Indifferent: [Chebycheff, PQ-HV, PQ-PO, NSGAII-2]
+        EffectSize: [
+            - { measure: CohensD, algorithm: Chebycheff, effectSize: 0.299806654627309, magnitude: small }
+            - { measure: CliffsDelta, algorithm: Chebycheff, effectSize: 0.12, magnitude: negligible }
+            - { measure: VarghaDelaneyA, algorithm: Chebycheff, effectSize: 0.44 }
+            - { measure: CohensD, algorithm: PQ-HV, effectSize: 0.8343165246362794, magnitude: large }
+            - { measure: CliffsDelta, algorithm: PQ-HV, effectSize: 0.48, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: PQ-HV, effectSize: 0.26 }
+            - { measure: CohensD, algorithm: PQ-PO, effectSize: 0.7975322776862451, magnitude: medium }
+            - { measure: CliffsDelta, algorithm: PQ-PO, effectSize: 0.46, magnitude: medium }
+            - { measure: VarghaDelaneyA, algorithm: PQ-PO, effectSize: 0.27 }
+            - { measure: CohensD, algorithm: NSGAII-2, effectSize: 0.7047587590530989, magnitude: medium }
+            - { measure: CliffsDelta, algorithm: NSGAII-2, effectSize: 0.32, magnitude: small }
+            - { measure: VarghaDelaneyA, algorithm: NSGAII-2, effectSize: 0.34 }
+        ]
+        Values: [0.1551664660749245, 0.09326866291005438, 0.08948066583362332, 0.10082618259452807, 0.15307951827783148, 0.1255084288191899, 0.09548419727127413, 0.131466865105019, 0.029868902834607677, 0.06391916429080072]
+---------------------------
+- Save Analysis to 'output/analysis/analysis.txt'
+- Save Indicator BoxPlots to 'output/analysis/'
+-------------------------------------------------------
+Results
+-------------------------------------------------------
+- Save objectives of all algorithms to 'output/objectives/objective_values.txt'
+Directory 'output/objectives' does not exist, it will be created.
+---------------------------
+Objectives of all algorithms
+---------------------------
+0.0 0.0 -0.0
+2.0 1.0 -1.0
+3.0 1.0 -2.0
+4.0 1.0 -3.0
+6.0 2.0 -4.0
+7.0 2.0 -5.0
+8.0 2.0 -6.0
+16.0 13.0 -7.0
+34.0 31.0 -15.0
+35.0 31.0 -16.0
+36.0 31.0 -17.0
+37.0 31.0 -18.0
+38.0 31.0 -19.0
+39.0 31.0 -20.0
+17.0 11.0 -7.0
+19.0 13.0 -8.0
+14.0 14.0 -7.0
+15.0 14.0 -8.0
+16.0 14.0 -9.0
+19.0 16.0 -10.0
+21.0 18.0 -11.0
+22.0 18.0 -12.0
+30.0 28.0 -13.0
+31.0 28.0 -14.0
+
+- Save solutions of all algorithms to 'output/solutions/objective_values.txt'
+Directory 'output/solutions' does not exist, it will be created.
+- Save solutions of all algorithms to 'output/solutions/objective_values.txt'
+- Save models of all algorithms to 'output/models/'
+Directory 'output/models' does not exist, it will be created.
+PQ-HV
+0.0 0.0 -0.0
+2.0 1.0 -1.0
+3.0 1.0 -2.0
+4.0 1.0 -3.0
+6.0 2.0 -4.0
+7.0 2.0 -5.0
+8.0 2.0 -6.0
+50.0 72.0 -13.0
+16.0 14.0 -7.0
+17.0 14.0 -8.0
+18.0 14.0 -9.0
+21.0 20.0 -10.0
+22.0 20.0 -11.0
+23.0 20.0 -12.0
+15.0 19.0 -7.0
+
+
+Tournament
+0.0 0.0 -0.0
+2.0 1.0 -1.0
+3.0 1.0 -2.0
+4.0 1.0 -3.0
+6.0 2.0 -4.0
+7.0 2.0 -5.0
+8.0 2.0 -6.0
+16.0 13.0 -7.0
+23.0 21.0 -10.0
+24.0 21.0 -11.0
+26.0 23.0 -12.0
+32.0 31.0 -13.0
+33.0 31.0 -14.0
+34.0 31.0 -15.0
+35.0 31.0 -16.0
+36.0 31.0 -17.0
+37.0 31.0 -18.0
+38.0 31.0 -19.0
+39.0 31.0 -20.0
+18.0 15.0 -8.0
+19.0 15.0 -9.0
+17.0 11.0 -7.0
+
+
+PQ-PO
+0.0 0.0 -0.0
+2.0 1.0 -1.0
+3.0 1.0 -2.0
+4.0 1.0 -3.0
+6.0 2.0 -4.0
+7.0 2.0 -5.0
+8.0 2.0 -6.0
+22.0 33.0 -8.0
+23.0 33.0 -9.0
+34.0 49.0 -12.0
+19.0 27.0 -7.0
+22.0 20.0 -7.0
+20.0 24.0 -7.0
+23.0 26.0 -8.0
+24.0 26.0 -9.0
+30.0 34.0 -10.0
+31.0 34.0 -11.0
+35.0 39.0 -12.0
+38.0 41.0 -13.0
+39.0 41.0 -14.0
+40.0 41.0 -15.0
+43.0 45.0 -16.0
+44.0 45.0 -17.0
+45.0 45.0 -18.0
+46.0 45.0 -19.0
+47.0 45.0 -20.0
+
+
+Chebycheff
+0.0 0.0 -0.0
+2.0 1.0 -1.0
+3.0 1.0 -2.0
+4.0 1.0 -3.0
+18.0 13.0 -7.0
+19.0 13.0 -8.0
+6.0 2.0 -4.0
+7.0 2.0 -5.0
+8.0 2.0 -6.0
+41.0 49.0 -18.0
+14.0 14.0 -7.0
+15.0 14.0 -8.0
+16.0 14.0 -9.0
+19.0 16.0 -10.0
+21.0 18.0 -11.0
+22.0 18.0 -12.0
+30.0 28.0 -13.0
+31.0 28.0 -14.0
+37.0 36.0 -15.0
+38.0 36.0 -16.0
+40.0 37.0 -17.0
+42.0 39.0 -18.0
+43.0 39.0 -19.0
+44.0 39.0 -20.0
+
+
+NSGAII-2
+21.0 23.0 -10.0
+23.0 21.0 -10.0
+27.0 27.0 -11.0
+14.0 13.0 -5.0
+13.0 22.0 -3.0
+20.0 22.0 -9.0
+15.0 14.0 -6.0
+27.0 29.0 -12.0
+19.0 19.0 -7.0
+14.0 16.0 -6.0
+32.0 35.0 -13.0
+25.0 30.0 -12.0
+40.0 37.0 -20.0
+35.0 39.0 -15.0
+20.0 19.0 -8.0
+42.0 32.0 -20.0
+21.0 18.0 -9.0
+
+
+Search finished.
+

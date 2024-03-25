@@ -1,0 +1,99 @@
+Number of variables: 9
+  Variable[0]: Assignment for unit 'RetrieveElseRelocate':
+- parameter 'container' => 'C6'
+- parameter 'from' => 'S2'
+- parameter 'to' => 'S1'
+	Match for rule 'checkIsNotLast':
+- parameter 'container' => 'C6'
+- parameter 'from' => 'S2'
+	Match for rule 'checkTargetStackNotEmpty':
+- parameter 'container' => 'C6'
+- parameter 'target' => 'S1'
+	Match for rule 'relocateNonLastOnStackToNonEmptyStack':
+- parameter 'container' => 'C6'
+- parameter 'from' => 'S2'
+- parameter 'to' => 'S1'
+
+  Variable[1]: Assignment for unit 'RetrieveElseRelocate':
+- parameter 'container' => 'C1'
+	Match for rule 'canRetrieveContainer':
+- parameter 'container' => 'C1'
+	Match for rule 'retrieveNonLastFromStack':
+- parameter 'container' => 'C1'
+
+  Variable[2]: Assignment for unit 'RetrieveElseRelocate':
+- parameter 'container' => 'C2'
+	Match for rule 'canRetrieveContainer':
+- parameter 'container' => 'C2'
+	Match for rule 'retrieveNonLastFromStack':
+- parameter 'container' => 'C2'
+
+  Variable[3]: Assignment for unit 'RetrieveElseRelocate':
+- parameter 'container' => 'C3'
+	Match for rule 'canRetrieveContainer':
+- parameter 'container' => 'C3'
+	Match for rule 'retrieveNonLastFromStack':
+- parameter 'container' => 'C3'
+
+  Variable[4]: Assignment for unit 'RetrieveElseRelocate':
+- parameter 'container' => 'C8'
+- parameter 'from' => 'S2'
+- parameter 'to' => 'S3'
+	Match for rule 'checkIsNotLast':
+- parameter 'container' => 'C8'
+- parameter 'from' => 'S2'
+	Match for rule 'checkTargetStackNotEmpty':
+- parameter 'container' => 'C8'
+- parameter 'target' => 'S3'
+	Match for rule 'relocateNonLastOnStackToNonEmptyStack':
+- parameter 'container' => 'C8'
+- parameter 'from' => 'S2'
+- parameter 'to' => 'S3'
+
+  Variable[5]: Assignment for unit 'RetrieveElseRelocate':
+- parameter 'container' => 'C4'
+- parameter 'from' => 'S2'
+	Match for rule 'canRetrieveContainer':
+- parameter 'container' => 'C4'
+	Match for rule 'checkNextToRetrieveIsLast':
+- parameter 'container' => 'C4'
+- parameter 'from' => 'S2'
+	Match for rule 'retrieveLastFromStack':
+- parameter 'container' => 'C4'
+- parameter 'from' => 'S2'
+
+  Variable[6]: Assignment for unit 'RetrieveElseRelocate':
+- parameter 'container' => 'C5'
+	Match for rule 'canRetrieveContainer':
+- parameter 'container' => 'C5'
+	Match for rule 'retrieveNonLastFromStack':
+- parameter 'container' => 'C5'
+
+  Variable[7]: Assignment for unit 'RetrieveElseRelocate':
+- parameter 'container' => 'C6'
+	Match for rule 'canRetrieveContainer':
+- parameter 'container' => 'C6'
+	Match for rule 'retrieveNonLastFromStack':
+- parameter 'container' => 'C6'
+
+  Variable[8]: Assignment for unit 'RetrieveElseRelocate':
+- parameter 'container' => 'C10'
+- parameter 'from' => 'S1'
+- parameter 'to' => 'S5'
+	Match for rule 'checkIsNotLast':
+- parameter 'container' => 'C10'
+- parameter 'from' => 'S1'
+	Match for rule 'checkTargetStackNotEmpty':
+- parameter 'container' => 'C10'
+- parameter 'target' => 'S5'
+	Match for rule 'relocateNonLastOnStackToNonEmptyStack':
+- parameter 'container' => 'C10'
+- parameter 'from' => 'S1'
+- parameter 'to' => 'S5'
+
+Number of attributes: 1
+  AggregatedFitness: 3.0630952380952383
+Number of objectives: 2
+  SolutionLength: 9.0
+  ContainerIndex: -5.936904761904762
+Number of constraints: 0

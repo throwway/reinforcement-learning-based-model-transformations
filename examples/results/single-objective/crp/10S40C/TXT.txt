@@ -1,0 +1,359 @@
+Search started.
+-------------------------------------------------------
+Search
+-------------------------------------------------------
+InputModel:      model/10S_40C.xmi
+Objectives:      [SolutionLength, ContainerIndex]
+NrObjectives:    2
+Constraints:     []
+NrConstraints:   0
+Transformations: [transformations/container.henshin]
+Units:           [ConditionalUnit RetrieveElseRelocate(container, from, to)]
+SolutionLength:  100
+PopulationSize:  100
+Iterations:      200
+MaxEvaluations:  20000
+AlgorithmRuns:   10
+---------------------------
+Run 'QLearningExplore' 10 times...
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by at.ac.tuwien.big.moea.experiment.instrumenter.SearchInstrumenter (file:/home/martin/Desktop/projects/jku/momot-experimental/MOMoT-RL/plugins/at.ac.tuwien.big.moea/target/classes/) to field java.util.AbstractCollection.MAX_ARRAY_SIZE
+WARNING: Please consider reporting this to the maintainers of at.ac.tuwien.big.moea.experiment.instrumenter.SearchInstrumenter
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[05:58:59.551] Run 1 of 10 started.
+[06:01:07.155] Run 1 of 10 terminated after 00:02:07.600 (127600 ms).
+[06:01:07.155] Run 2 of 10 started.
+[06:03:07.505] Run 2 of 10 terminated after 00:02:00.349 (120349 ms).
+[06:03:07.505] Run 3 of 10 started.
+[06:05:05.581] Run 3 of 10 terminated after 00:01:58.075 (118075 ms).
+[06:05:05.582] Run 4 of 10 started.
+[06:07:01.766] Run 4 of 10 terminated after 00:01:56.183 (116183 ms).
+[06:07:01.766] Run 5 of 10 started.
+[06:08:57.742] Run 5 of 10 terminated after 00:01:55.975 (115975 ms).
+[06:08:57.742] Run 6 of 10 started.
+[06:10:52.059] Run 6 of 10 terminated after 00:01:54.316 (114316 ms).
+[06:10:52.060] Run 7 of 10 started.
+[06:12:46.619] Run 7 of 10 terminated after 00:01:54.558 (114558 ms).
+[06:12:46.619] Run 8 of 10 started.
+[06:14:44.452] Run 8 of 10 terminated after 00:01:57.832 (117832 ms).
+[06:14:44.452] Run 9 of 10 started.
+[06:16:35.636] Run 9 of 10 terminated after 00:01:51.183 (111183 ms).
+[06:16:35.636] Run 10 of 10 started.
+[06:18:25.787] Run 10 of 10 terminated after 00:01:50.150 (110150 ms).
+[06:18:25.787] Total runtime for 10 seeds: 00:19:26.236 (1166236 ms).
+Run 'QLearning' 10 times...
+[06:18:25.788] Run 1 of 10 started.
+[06:22:42.231] Run 1 of 10 terminated after 00:04:16.442 (256442 ms).
+[06:22:42.231] Run 2 of 10 started.
+[06:26:54.532] Run 2 of 10 terminated after 00:04:12.300 (252300 ms).
+[06:26:54.532] Run 3 of 10 started.
+[06:31:12.862] Run 3 of 10 terminated after 00:04:18.329 (258329 ms).
+[06:31:12.862] Run 4 of 10 started.
+[06:35:30.885] Run 4 of 10 terminated after 00:04:18.022 (258022 ms).
+[06:35:30.885] Run 5 of 10 started.
+[06:39:51.012] Run 5 of 10 terminated after 00:04:20.126 (260126 ms).
+[06:39:51.012] Run 6 of 10 started.
+[06:44:10.950] Run 6 of 10 terminated after 00:04:19.937 (259937 ms).
+[06:44:10.950] Run 7 of 10 started.
+[06:48:31.381] Run 7 of 10 terminated after 00:04:20.430 (260430 ms).
+[06:48:31.381] Run 8 of 10 started.
+[06:52:49.355] Run 8 of 10 terminated after 00:04:17.973 (257973 ms).
+[06:52:49.356] Run 9 of 10 started.
+[06:57:14.619] Run 9 of 10 terminated after 00:04:25.263 (265263 ms).
+[06:57:14.620] Run 10 of 10 started.
+[07:01:37.732] Run 10 of 10 terminated after 00:04:23.112 (263112 ms).
+[07:01:37.733] Total runtime for 10 seeds: 00:43:11.944 (2591944 ms).
+Run 'NSGAII-2' 10 times...
+[07:01:38.946] Run 1 of 10 started.
+[07:05:12.888] Run 1 of 10 terminated after 00:03:33.941 (213941 ms).
+[07:05:12.888] Run 2 of 10 started.
+[07:08:49.625] Run 2 of 10 terminated after 00:03:36.736 (216736 ms).
+[07:08:49.625] Run 3 of 10 started.
+[07:12:30.546] Run 3 of 10 terminated after 00:03:40.921 (220921 ms).
+[07:12:30.547] Run 4 of 10 started.
+[07:16:04.525] Run 4 of 10 terminated after 00:03:33.977 (213977 ms).
+[07:16:04.525] Run 5 of 10 started.
+[07:19:43.296] Run 5 of 10 terminated after 00:03:38.771 (218771 ms).
+[07:19:43.297] Run 6 of 10 started.
+[07:23:09.183] Run 6 of 10 terminated after 00:03:25.886 (205886 ms).
+[07:23:09.183] Run 7 of 10 started.
+[07:26:31.585] Run 7 of 10 terminated after 00:03:22.401 (202401 ms).
+[07:26:31.585] Run 8 of 10 started.
+[07:30:01.947] Run 8 of 10 terminated after 00:03:30.361 (210361 ms).
+[07:30:01.947] Run 9 of 10 started.
+[07:33:29.149] Run 9 of 10 terminated after 00:03:27.201 (207201 ms).
+[07:33:29.149] Run 10 of 10 started.
+[07:36:57.500] Run 10 of 10 terminated after 00:03:28.350 (208350 ms).
+[07:36:57.500] Total runtime for 10 seeds: 00:35:18.554 (2118554 ms).
+-------------------------------------------------------
+Analysis
+-------------------------------------------------------
+---------------------------
+Analysis Results
+---------------------------
+QLearningExplore:
+    Hypervolume: 
+        Aggregate: 0.5126632040325808
+        Min: 0.1984457210453949
+        Median: 0.3264431515482239
+        Max: 0.4994663636305337
+        Mean: 0.33677220602515145
+        StandardDeviation: 0.12337263270665064
+        Variance: 0.015220806500970123
+        Count: 10
+        Indifferent: [NSGAII-2]
+        EffectSize: [
+            - { measure: CohensD, algorithm: QLearning, effectSize: 1.8401759219063047, magnitude: large }
+            - { measure: CliffsDelta, algorithm: QLearning, effectSize: 0.8, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: QLearning, effectSize: 0.1 }
+            - { measure: CohensD, algorithm: NSGAII-2, effectSize: 0.18579222040094612, magnitude: negligible }
+            - { measure: CliffsDelta, algorithm: NSGAII-2, effectSize: 0.06, magnitude: negligible }
+            - { measure: VarghaDelaneyA, algorithm: NSGAII-2, effectSize: 0.47 }
+        ]
+        Values: [0.3578399946321009, 0.4994663636305337, 0.29504630846434693, 0.4471737757143591, 0.19862628319048878, 0.49870318173629596, 0.2568752356207166, 0.19905547199680074, 0.4164897242204768, 0.1984457210453949]
+    GenerationalDistance: 
+        Aggregate: 0.011677126499502921
+        Min: 0.008714872481411553
+        Median: 0.021398264623274564
+        Max: 0.05277153369813508
+        Mean: 0.025082377062411537
+        StandardDeviation: 0.0148456883663957
+        Variance: 2.2039446307213663E-4
+        Count: 10
+        Indifferent: [QLearning]
+        EffectSize: [
+            - { measure: CohensD, algorithm: QLearning, effectSize: 0.8220141259533019, magnitude: large }
+            - { measure: CliffsDelta, algorithm: QLearning, effectSize: 0.38, magnitude: medium }
+            - { measure: VarghaDelaneyA, algorithm: QLearning, effectSize: 0.69 }
+            - { measure: CohensD, algorithm: NSGAII-2, effectSize: 1.7833828280521944, magnitude: large }
+            - { measure: CliffsDelta, algorithm: NSGAII-2, effectSize: 0.74, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: NSGAII-2, effectSize: 0.13 }
+        ]
+        Values: [0.014923206448867578, 0.008714872481411553, 0.016640580654666174, 0.018060657225122487, 0.04510700814554552, 0.009716736362148667, 0.03444093595912852, 0.02473587202142664, 0.02571236762766316, 0.05277153369813508]
+QLearning:
+    Hypervolume: 
+        Aggregate: 0.5968612539223862
+        Min: 0.436365634244702
+        Median: 0.5103436070193337
+        Max: 0.5839776204653021
+        Mean: 0.5072569353116889
+        StandardDeviation: 0.04411024831545189
+        Variance: 0.0019457140064508263
+        Count: 10
+        Indifferent: []
+        EffectSize: [
+            - { measure: CohensD, algorithm: QLearningExplore, effectSize: 1.8401759219063047, magnitude: large }
+            - { measure: CliffsDelta, algorithm: QLearningExplore, effectSize: 0.8, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: QLearningExplore, effectSize: 0.9 }
+            - { measure: CohensD, algorithm: NSGAII-2, effectSize: 4.103281014284608, magnitude: large }
+            - { measure: CliffsDelta, algorithm: NSGAII-2, effectSize: 1.0, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: NSGAII-2, effectSize: 1.0 }
+        ]
+        Values: [0.5301936334861383, 0.5839776204653021, 0.538057399843341, 0.436365634244702, 0.4988352856893074, 0.45060940238918057, 0.4972434406071767, 0.5353892396780653, 0.52185192834936, 0.48004576836431534]
+    GenerationalDistance: 
+        Aggregate: 0.006484117621142025
+        Min: 0.008119907309125157
+        Median: 0.016104206077528452
+        Max: 0.02404335528373464
+        Mean: 0.01603399297510351
+        StandardDeviation: 0.00468391458730645
+        Variance: 2.193905586118215E-5
+        Count: 10
+        Indifferent: [QLearningExplore]
+        EffectSize: [
+            - { measure: CohensD, algorithm: QLearningExplore, effectSize: 0.8220141259533019, magnitude: large }
+            - { measure: CliffsDelta, algorithm: QLearningExplore, effectSize: 0.38, magnitude: medium }
+            - { measure: VarghaDelaneyA, algorithm: QLearningExplore, effectSize: 0.31 }
+            - { measure: CohensD, algorithm: NSGAII-2, effectSize: 4.062152259360817, magnitude: large }
+            - { measure: CliffsDelta, algorithm: NSGAII-2, effectSize: 1.0, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: NSGAII-2, effectSize: 0.0 }
+        ]
+        Values: [0.016925510122032278, 0.008119907309125157, 0.013848644178171535, 0.02404335528373464, 0.013290965662487149, 0.021872434306003625, 0.018263303412982688, 0.011767397321441123, 0.016493561167285963, 0.01571485098777094]
+NSGAII-2:
+    Hypervolume: 
+        Aggregate: 0.42746681903971046
+        Min: 0.2926228833090935
+        Median: 0.353209113867498
+        Max: 0.39454031213980223
+        Mean: 0.3534344358758847
+        StandardDeviation: 0.029409841928083946
+        Variance: 8.649388022348844E-4
+        Count: 10
+        Indifferent: [QLearningExplore]
+        EffectSize: [
+            - { measure: CohensD, algorithm: QLearningExplore, effectSize: 0.18579222040094612, magnitude: negligible }
+            - { measure: CliffsDelta, algorithm: QLearningExplore, effectSize: 0.06, magnitude: negligible }
+            - { measure: VarghaDelaneyA, algorithm: QLearningExplore, effectSize: 0.53 }
+            - { measure: CohensD, algorithm: QLearning, effectSize: 4.103281014284608, magnitude: large }
+            - { measure: CliffsDelta, algorithm: QLearning, effectSize: 1.0, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: QLearning, effectSize: 0.0 }
+        ]
+        Values: [0.35471121483228835, 0.3412794818693847, 0.3517070129027076, 0.35977672988879744, 0.2926228833090935, 0.39454031213980223, 0.38195799857910334, 0.3797953138686573, 0.35075779293951, 0.3271956184295023]
+    GenerationalDistance: 
+        Aggregate: 0.024305817132872633
+        Min: 0.03297166257911681
+        Median: 0.04653986407950478
+        Max: 0.06740935051139478
+        Mean: 0.04761814412808233
+        StandardDeviation: 0.00994832736721673
+        Variance: 9.896921740531338E-5
+        Count: 10
+        Indifferent: []
+        EffectSize: [
+            - { measure: CohensD, algorithm: QLearningExplore, effectSize: 1.7833828280521944, magnitude: large }
+            - { measure: CliffsDelta, algorithm: QLearningExplore, effectSize: 0.74, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: QLearningExplore, effectSize: 0.87 }
+            - { measure: CohensD, algorithm: QLearning, effectSize: 4.062152259360817, magnitude: large }
+            - { measure: CliffsDelta, algorithm: QLearning, effectSize: 1.0, magnitude: large }
+            - { measure: VarghaDelaneyA, algorithm: QLearning, effectSize: 1.0 }
+        ]
+        Values: [0.06740935051139478, 0.05096330516095515, 0.0521845907981866, 0.03297166257911681, 0.04317827713858174, 0.04276891682083729, 0.046988669302698446, 0.03668323564636325, 0.04609105885631111, 0.056942374466378134]
+---------------------------
+- Save Analysis to 'output/analysis/analysis.txt'
+- Save Indicator BoxPlots to 'output/analysis/'
+-------------------------------------------------------
+Results
+-------------------------------------------------------
+- Save objectives of all algorithms to 'output/objectives/objective_values.txt'
+Directory 'output/objectives' does not exist, it will be created.
+---------------------------
+Objectives of all algorithms
+---------------------------
+0.0 0.1845238095238095
+22.0 -6.869404761904762
+23.0 -7.863571428571428
+26.0 -8.857738095238096
+1.0 0.15952380952380954
+2.0 -0.8404761904761905
+3.0 -1.8404761904761904
+4.0 -2.8383333333333334
+36.0 -8.939583333333333
+25.0 -7.883611111111111
+72.0 -11.931071428571428
+16.0 -5.861011904761905
+17.0 -5.879166666666666
+19.0 -5.891071428571428
+21.0 -5.904166666666667
+9.0 -2.8960714285714286
+5.0 -2.8633333333333333
+27.0 -8.891130952380953
+30.0 -8.916130952380952
+32.0 -8.919464285714286
+33.0 -8.925297619047619
+6.0 -2.875
+11.0 -2.909404761904762
+12.0 -3.88
+13.0 -4.88
+15.0 -4.888333333333334
+7.0 -2.89
+8.0 -2.8935714285714287
+10.0 -2.9027777777777777
+68.0 -11.910833333333333
+92.0 -13.941060606060606
+60.0 -11.895456349206349
+99.0 -14.94111111111111
+77.0 -13.894642857142857
+56.0 -10.884642857142858
+54.0 -9.901190476190477
+51.0 -9.878333333333334
+78.0 -13.93625
+69.0 -11.916904761904762
+
+- Save solutions of all algorithms to 'output/solutions/objective_values.txt'
+Directory 'output/solutions' does not exist, it will be created.
+- Save solutions of all algorithms to 'output/solutions/objective_values.txt'
+- Save models of all algorithms to 'output/models/'
+Directory 'output/models' does not exist, it will be created.
+QLearning
+0.0 0.1845238095238095
+22.0 -6.869404761904762
+23.0 -7.863571428571428
+26.0 -8.857738095238096
+1.0 0.15952380952380954
+2.0 -0.8404761904761905
+3.0 -1.8404761904761904
+4.0 -2.8383333333333334
+10.0 -2.8960119047619046
+32.0 -8.889583333333333
+35.0 -8.914583333333333
+36.0 -8.939583333333333
+82.0 -12.876363636363637
+83.0 -12.888863636363636
+84.0 -12.897196969696969
+86.0 -12.905
+90.0 -12.907261904761905
+6.0 -2.8741666666666665
+12.0 -3.857738095238095
+13.0 -4.8619047619047615
+25.0 -7.883611111111111
+68.0 -11.878690476190476
+69.0 -11.8825
+71.0 -11.906071428571428
+72.0 -11.931071428571428
+16.0 -5.861011904761905
+65.0 -9.906785714285714
+66.0 -10.906785714285714
+67.0 -10.914285714285715
+7.0 -2.8798809523809523
+17.0 -5.879166666666666
+9.0 -2.890833333333333
+15.0 -4.869166666666667
+5.0 -2.8608333333333333
+11.0 -2.8988095238095237
+19.0 -5.891071428571428
+8.0 -2.8845833333333335
+
+
+QLearningExplore
+0.0 0.1845238095238095
+1.0 0.15952380952380954
+2.0 -0.8404761904761905
+3.0 -1.8404761904761904
+4.0 -2.8383333333333334
+20.0 -4.904166666666667
+21.0 -5.904166666666667
+22.0 -5.905833333333334
+9.0 -2.8960714285714286
+5.0 -2.8633333333333333
+24.0 -5.913630952380952
+25.0 -6.913630952380952
+26.0 -7.907797619047619
+27.0 -8.891130952380953
+30.0 -8.916130952380952
+32.0 -8.919464285714286
+33.0 -8.925297619047619
+70.0 -8.925694444444444
+6.0 -2.875
+11.0 -2.909404761904762
+12.0 -3.88
+13.0 -4.88
+15.0 -4.888333333333334
+17.0 -4.892261904761905
+73.0 -8.92686507936508
+74.0 -8.927777777777777
+7.0 -2.89
+8.0 -2.8935714285714287
+10.0 -2.9027777777777777
+
+
+NSGAII-2
+68.0 -11.910833333333333
+92.0 -13.941060606060606
+60.0 -11.895456349206349
+99.0 -14.94111111111111
+77.0 -13.894642857142857
+56.0 -10.884642857142858
+54.0 -9.901190476190477
+47.0 -5.872142857142857
+51.0 -9.878333333333334
+76.0 -11.922361111111112
+49.0 -7.888882783882784
+48.0 -5.87375
+50.0 -8.894285714285715
+78.0 -13.93625
+69.0 -11.916904761904762
+
+
+Search finished.
+
