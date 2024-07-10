@@ -24,15 +24,15 @@ public interface IRLUtils<S extends Solution> {
          Map<String, Unit> unitMapping);
 
    ISOQTableAccessor<List<IApplicationState>, List<IApplicationState>> initSOQTable(Map<String, Unit> unitMapping);
+   //
+   // IMOQTableAccessor<List<IApplicationState>, List<IApplicationState>> loadMOQTable(final String inputSrc,
+   // Map<String, Unit> unitMapping);
 
-   IMOQTableAccessor<List<IApplicationState>, List<IApplicationState>> loadMOQTable(final String inputSrc,
-         Map<String, Unit> unitMapping);
-
-   IParetoQTableAccessor<List<IApplicationState>, List<IApplicationState>> loadParetoQTable(String qTableIn,
-         Map<String, Unit> unitMapping);
-
-   ISOQTableAccessor<List<IApplicationState>, List<IApplicationState>> loadSOQTable(final String inputSrc,
-         Map<String, Unit> unitMapping);
+   // IParetoQTableAccessor<List<IApplicationState>, List<IApplicationState>> loadParetoQTable(String qTableIn,
+   // Map<String, Unit> unitMapping);
+   //
+   // ISOQTableAccessor<List<IApplicationState>, List<IApplicationState>> loadSOQTable(final String inputSrc,
+   // Map<String, Unit> unitMapping);
 
    S newTransformationSolution(final S s);
 

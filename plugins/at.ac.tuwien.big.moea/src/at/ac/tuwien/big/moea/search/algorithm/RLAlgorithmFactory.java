@@ -2,7 +2,6 @@ package at.ac.tuwien.big.moea.search.algorithm;
 
 import at.ac.tuwien.big.moea.ISearchOrchestration;
 import at.ac.tuwien.big.moea.search.algorithm.provider.AbstractRegisteredAlgorithm;
-import at.ac.tuwien.big.moea.search.algorithm.reinforcement.algorithms.GoExplore;
 import at.ac.tuwien.big.moea.search.algorithm.reinforcement.algorithms.NegotiatedWLearning;
 import at.ac.tuwien.big.moea.search.algorithm.reinforcement.algorithms.ParetoQLearning;
 import at.ac.tuwien.big.moea.search.algorithm.reinforcement.algorithms.SingleObjectiveQLearning;
@@ -10,24 +9,13 @@ import at.ac.tuwien.big.moea.search.algorithm.reinforcement.algorithms.WeightedQ
 import at.ac.tuwien.big.moea.search.algorithm.reinforcement.environment.IEnvironment;
 import at.ac.tuwien.big.moea.search.algorithm.reinforcement.environment.IMOEnvironment;
 import at.ac.tuwien.big.moea.search.algorithm.reinforcement.environment.ISOEnvironment;
-import at.ac.tuwien.big.moea.search.algorithm.reinforcement.networks.ActorCriticNetwork;
-import at.ac.tuwien.big.moea.search.algorithm.reinforcement.networks.DDQNNetwork;
-import at.ac.tuwien.big.moea.search.algorithm.reinforcement.networks.EpsGreedyNetworkAgent;
-import at.ac.tuwien.big.moea.search.algorithm.reinforcement.networks.INetwork;
-import at.ac.tuwien.big.moea.search.algorithm.reinforcement.networks.NetworkAgent;
-import at.ac.tuwien.big.moea.search.algorithm.reinforcement.networks.ReinforceNetwork;
 import at.ac.tuwien.big.moea.search.algorithm.reinforcement.utils.EvaluationStrategy;
-import at.ac.tuwien.big.moea.search.algorithm.reinforcement.utils.FileManager;
 import at.ac.tuwien.big.moea.search.algorithm.reinforcement.utils.LocalSearchStrategy;
 
 import java.io.File;
-import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.Map;
 
-import org.deeplearning4j.nn.graph.ComputationGraph;
-import org.deeplearning4j.nn.transferlearning.FineTuneConfiguration;
-import org.deeplearning4j.nn.transferlearning.TransferLearning;
 import org.moeaframework.core.Solution;
 
 public class RLAlgorithmFactory<S extends Solution> extends AbstractAlgorithmFactory<S> {
@@ -62,65 +50,6 @@ public class RLAlgorithmFactory<S extends Solution> extends AbstractAlgorithmFac
 
    }
 
-   public AbstractRegisteredAlgorithm<NetworkAgent<S>> createActorCritic(final double gamma, final double learningRate,
-         final double l2Regularization, final double dropoutRate, final String actorNetworkPath,
-         final String criticNetworkPath, final boolean disableRegularization, final String actorSavePath,
-         final String criticSavePath, final String scoreSavePath, final int epochsPerModelSave,
-         final boolean enableProgressServer, final int terminateAfterEpisodes, final boolean verbose) {
-
-      if(!this.getEnvironments().containsKey(IEnvironment.Type.PolicyBasedEnvironment)) {
-         throw new RuntimeException(
-               "None of the environments passed to RLAlgorithmFactory is of type  \"PolicyBasedEnvironment\"!");
-      }
-
-      ComputationGraph actorNN = null;
-      ComputationGraph criticNN = null;
-      if(actorNetworkPath != null && criticNetworkPath != null) {
-         System.out
-               .println(String.format("Loading actor computation graph for retraining from %s...", actorNetworkPath));
-         System.out
-               .println(String.format("Loading actor computation graph for retraining from %s...", criticNetworkPath));
-         try {
-            actorNN = ComputationGraph.load(new File(actorNetworkPath), true);
-            criticNN = ComputationGraph.load(new File(criticNetworkPath), true);
-
-            if(disableRegularization) {
-               final FineTuneConfiguration ftc = new FineTuneConfiguration.Builder().dropOut(0.0).l2(0.0).build();
-               actorNN = new TransferLearning.GraphBuilder(actorNN).fineTuneConfiguration(ftc).build();
-               criticNN = new TransferLearning.GraphBuilder(criticNN).fineTuneConfiguration(ftc).build();
-            }
-
-         } catch(final IOException e) {
-            e.printStackTrace();
-         }
-      } else {
-         actorNN = this.getPolicyEnvironment().getProblemEncoder().getActorArchitecture(this.getInitialSolution(),
-               learningRate, l2Regularization, dropoutRate, verbose);
-         criticNN = this.getPolicyEnvironment().getProblemEncoder().getCriticArchitecture(this.getInitialSolution(),
-               learningRate, l2Regularization, dropoutRate, verbose);
-      }
-
-      if(actorSavePath != null && criticSavePath != null) {
-         FileManager.createDirsIfNonNullAndNotExists(Paths.get(getOutputPath(), "nn", "ac", actorSavePath).toString(),
-               Paths.get(getOutputPath(), "nn", "ac", criticSavePath).toString());
-      }
-
-      final INetwork networkAgent = ActorCriticNetwork.of(actorNN, criticNN,
-            actorSavePath != null ? Paths.get(getOutputPath(), "nn", "ac", actorSavePath).toString() : null,
-            criticSavePath != null ? Paths.get(getOutputPath(), "nn", "ac", criticSavePath).toString() : null,
-            this.getPolicyEnvironment().getProblemEncoder().getActionSpace(this.getInitialSolution()), gamma,
-            enableProgressServer);
-
-      return new AbstractRegisteredAlgorithm<NetworkAgent<S>>() {
-         @Override
-         public NetworkAgent<S> createAlgorithm() {
-            return new NetworkAgent<>(networkAgent, createProblem(), getPolicyEnvironment(),
-                  scoreSavePath != null ? Paths.get(getOutputPath(), "rewards", scoreSavePath).toString() : null,
-                  epochsPerModelSave, terminateAfterEpisodes, verbose);
-         }
-      };
-   }
-
    public AbstractRegisteredAlgorithm<WeightedQLearning<S>> createChebyshevQLearner(final double[] w, final double tau,
          final LocalSearchStrategy localSearchStrategy, final int explorationSteps, final double gamma,
          final double eps, final boolean withEpsDecay, final double epsDecay, final double epsMinimum,
@@ -137,84 +66,6 @@ public class RLAlgorithmFactory<S extends Solution> extends AbstractAlgorithmFac
          public WeightedQLearning<S> createAlgorithm() {
             return new WeightedQLearning<>(w, tau, localSearchStrategy, explorationSteps, gamma, eps, withEpsDecay,
                   epsDecay, epsMinimum, createProblem(), getMOValueEnvironment(),
-                  savePath != null ? Paths.get(getOutputPath(), "rewards", savePath).toString() : null, recordInterval,
-                  terminateAfterEpisodes, qTableIn, qTableOut, verbose);
-         }
-      };
-   }
-
-   public AbstractRegisteredAlgorithm<EpsGreedyNetworkAgent<S>> createDQNN(final double gamma,
-         final double learningRate, final double eps, final int numEpisodes, final int bufferSize, final int batchSize,
-         final int updateTarget, final double l2Regularization, final double dropoutRate, final String networkPath,
-         final boolean disableRegularization, final String networkSavePath, final String scoreSavePath,
-         final int epochsPerModelSave, final boolean enableProgressServer, final int terminateAfterEpisodes,
-         final boolean verbose) {
-
-      if(!this.getEnvironments().containsKey(IEnvironment.Type.PolicyBasedEnvironment)) {
-         throw new RuntimeException(
-               "None of the environments passed to RLAlgorithmFactory is of type  \"PolicyBasedEnvironment\"!");
-      }
-
-      ComputationGraph dqNet = null;
-      final ComputationGraph dqTargetNet = this.getPolicyEnvironment().getProblemEncoder()
-            .getDDQNArchitecture(this.getInitialSolution(), learningRate, l2Regularization, dropoutRate, verbose);
-
-      if(networkPath != null) {
-         System.out.println(String.format("Loading  computation graph for retraining from %s...", networkPath));
-         try {
-            dqNet = ComputationGraph.load(new File(networkPath), true);
-
-            if(disableRegularization) {
-               final FineTuneConfiguration ftc = new FineTuneConfiguration.Builder().dropOut(0.0).l2(0.0).build();
-               dqNet = new TransferLearning.GraphBuilder(dqNet).fineTuneConfiguration(ftc).build();
-            }
-
-            for(int i = 0; i < dqNet.getLayers().length; i++) {
-               dqTargetNet.getLayer(i).setParams(dqNet.getLayer(i).params());
-            }
-
-         } catch(final IOException e) {
-            e.printStackTrace();
-         }
-      } else {
-         dqNet = this.getPolicyEnvironment().getProblemEncoder().getDDQNArchitecture(this.getInitialSolution(),
-               learningRate, l2Regularization, dropoutRate, verbose);
-      }
-
-      if(networkSavePath != null) {
-         FileManager
-               .createDirsIfNonNullAndNotExists(Paths.get(getOutputPath(), "nn", "ddqn", networkSavePath).toString());
-      }
-
-      final INetwork networkAgent = DDQNNetwork.of(dqNet,
-            networkSavePath != null ? Paths.get(getOutputPath(), "nn", "ddqn", networkSavePath).toString() : null,
-            this.getPolicyEnvironment().getProblemEncoder().getActionSpace(this.getInitialSolution()), gamma,
-            enableProgressServer);
-      return new AbstractRegisteredAlgorithm<EpsGreedyNetworkAgent<S>>() {
-         @Override
-         public EpsGreedyNetworkAgent<S> createAlgorithm() {
-            return new EpsGreedyNetworkAgent<>(networkAgent, dqTargetNet, eps, numEpisodes, bufferSize, batchSize,
-                  updateTarget, createProblem(), getPolicyEnvironment(),
-                  scoreSavePath != null ? Paths.get(getOutputPath(), "rewards", scoreSavePath).toString() : null,
-                  epochsPerModelSave, terminateAfterEpisodes, verbose);
-         }
-      };
-   }
-
-   public AbstractRegisteredAlgorithm<GoExplore<S>> createGoExploreLearner(
-         final LocalSearchStrategy localSearchStrategy, final int explorationSteps, final String savePath,
-         final int recordInterval, final int terminateAfterEpisodes, final String qTableIn, final String qTableOut,
-         final boolean verbose) {
-
-      if(!this.getEnvironments().containsKey(IEnvironment.Type.MOValueBasedEnvironment)) {
-         throw new RuntimeException(
-               "None of the environments passed to RLAlgorithmFactory is of type  \"MOValueBasedEnvironment\"!");
-      }
-
-      return new AbstractRegisteredAlgorithm<GoExplore<S>>() {
-         @Override
-         public GoExplore<S> createAlgorithm() {
-            return new GoExplore<>(localSearchStrategy, explorationSteps, createProblem(), getMOValueEnvironment(),
                   savePath != null ? Paths.get(getOutputPath(), "rewards", savePath).toString() : null, recordInterval,
                   terminateAfterEpisodes, qTableIn, qTableOut, verbose);
          }
@@ -239,83 +90,6 @@ public class RLAlgorithmFactory<S extends Solution> extends AbstractAlgorithmFac
                   withEpsDecay, epsDecay, epsMinimum, createProblem(), getMOValueEnvironment(),
                   savePath != null ? Paths.get(getOutputPath(), "rewards", savePath).toString() : null, recordInterval,
                   terminateAfterEpisodes, qTableIn, qTableOut, verbose);
-         }
-      };
-   }
-
-   /**
-    * Policy gradient network architecture
-    *
-    * @param gamma
-    *           .. discount factor
-    * @param learningRate
-    *           .. learning rate
-    * @param problemType
-    *           .. problem type for encodings
-    * @param network
-    *           .. can be given to continue training a saved model state
-    * @param modelSavePath
-    *           .. path to save model state every n epochs
-    * @param scoreSavePath
-    *           .. path to save score over time every n epochs
-    * @param epochsPerModelSave
-    *           .. n (number of epochs to save a model and score stats)
-    * @param enableProgressServer
-    *           .. should the server be enabled for training stats, i.e., gradient updates, loss, ..
-    *
-    * @param terminateAfterSeconds
-    *           .. If > 0, the training run will terminate after the given amount of time
-    * @return
-    */
-   public AbstractRegisteredAlgorithm<NetworkAgent<S>> createPolicyGradient(final double gamma,
-         final double learningRate, final boolean withBaseline, final double l2Regularization, final double dropoutRate,
-         final String networkPath, final boolean disableRegularization, final String modelSavePath,
-         final String scoreSavePath, final int epochsPerModelSave, final boolean enableProgressServer,
-         final int terminateAfterEpisodes, final boolean verbose) {
-
-      if(!this.getEnvironments().containsKey(IEnvironment.Type.PolicyBasedEnvironment)) {
-         throw new RuntimeException(
-               "None of the environments passed to RLAlgorithmFactory is of type  \"PolicyBasedEnvironment\"!");
-      }
-
-      ComputationGraph nn = null;
-      if(networkPath != null) {
-         System.out.println("Loading computation graph for retraining...");
-         try {
-            nn = ComputationGraph.load(new File(networkPath), true);
-
-            if(disableRegularization) {
-               final FineTuneConfiguration ftc = new FineTuneConfiguration.Builder().dropOut(0.0).l2(0.0).build();
-               nn = new TransferLearning.GraphBuilder(nn).fineTuneConfiguration(ftc).build();
-            }
-         } catch(final IOException e) {
-            e.printStackTrace();
-         }
-
-      } else {
-         // this.nn = getVPGNetwork(stateSpace, totalActions);
-
-         nn = this.getPolicyEnvironment().getProblemEncoder().getNetworkArchitecture(this.getInitialSolution(),
-               learningRate, l2Regularization, dropoutRate, verbose);
-      }
-
-      if(modelSavePath != null) {
-         FileManager.createDirsIfNonNullAndNotExists(Paths.get(getOutputPath(), "nn", "pg", modelSavePath).toString());
-      }
-
-      final INetwork networkAgent = ReinforceNetwork.of(nn,
-            modelSavePath != null ? Paths.get(getOutputPath(), "nn", "pg", modelSavePath).toString() : null,
-            this.getPolicyEnvironment().getProblemEncoder().getActionSpace(this.getInitialSolution()), gamma,
-            withBaseline, enableProgressServer);
-
-      return new AbstractRegisteredAlgorithm<NetworkAgent<S>>() {
-
-         @Override
-         public NetworkAgent<S> createAlgorithm() {
-            return new NetworkAgent<>(networkAgent, createProblem(), getPolicyEnvironment(),
-
-                  scoreSavePath != null ? Paths.get(getOutputPath(), "rewards", scoreSavePath).toString() : null,
-                  epochsPerModelSave, terminateAfterEpisodes, verbose);
          }
       };
    }

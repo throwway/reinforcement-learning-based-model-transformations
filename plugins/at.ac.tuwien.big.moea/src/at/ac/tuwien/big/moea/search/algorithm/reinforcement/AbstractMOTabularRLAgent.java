@@ -19,8 +19,8 @@ public abstract class AbstractMOTabularRLAgent<S extends Solution> extends Abstr
 
    protected IMOQTableAccessor<List<IApplicationState>, List<IApplicationState>> qTable;
 
-   protected final List<List<Double>> rewardEarnedLists;
-   protected final List<List<Double>> meanRewardEarnedLists;
+   protected List<List<Double>> rewardEarnedLists;
+   protected List<List<Double>> meanRewardEarnedLists;
    protected List<Double> cumRewardList;
 
    public AbstractMOTabularRLAgent(final Problem problem, final IMOEnvironment<S> environment, final String savePath,
@@ -34,7 +34,9 @@ public abstract class AbstractMOTabularRLAgent<S extends Solution> extends Abstr
       this.cumRewardList = new ArrayList<>(Collections.nCopies(this.environment.getFitnessComparators().size(), 0.0));
 
       if(this.qTableIn != null) {
-         this.qTable = this.utils.loadMOQTable(qTableIn, environment.getUnitMapping());
+         // this.qTable = this.utils.loadMOQTable(qTableIn, environment.getUnitMapping());
+         throw new RuntimeException("Check this out!");
+
       } else {
          this.qTable = this.utils.initMOQTable(environment.getUnitMapping());
          this.qTable.addStateIfNotExists(new ArrayList<>());
@@ -46,6 +48,7 @@ public abstract class AbstractMOTabularRLAgent<S extends Solution> extends Abstr
       if(this.qTableOut != null) {
          utils.writeQTableToDisk(this.qTable, this.qTableOut);
       }
+
       return this.population;
    }
 
@@ -67,6 +70,22 @@ public abstract class AbstractMOTabularRLAgent<S extends Solution> extends Abstr
 
       FileManager.saveBenchMark("evaluations;" + String.join(";", funcNames) + ";runtime in ms;", lll,
             scoreSavePath + "_" + FileManager.milliSecondsToFormattedDate(this.startTime) + ".csv");
+   }
+
+   @Override
+   public void terminate() {
+      super.terminate();
+      this.qTable.clear();
+      this.qTable = null;
+      this.rewardEarnedLists = null;
+      this.cumRewardList = null;
+      this.meanRewardEarnedLists = null;
+      framesList = null;
+      timePassedList = null;
+      this.population = null;
+      this.utils = null;
+      System.out.println("Finalizing CustomAlgorithm...");
+      // Perform any cleanup or final tasks here
    }
 
 }

@@ -57,7 +57,7 @@ public class ExploreUtils {
          appliedRules.addAll(((UnitApplicationVariable) ua).getAppliedRules());
       }
 
-      final ApplicationState a = new ApplicationState(ua.getUnit(), params, appliedRules);
+      final ApplicationState a = new ApplicationState(ua.getUnit().getName(), params);
       return a;
    }
 

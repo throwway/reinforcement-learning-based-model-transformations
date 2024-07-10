@@ -320,7 +320,7 @@ public class SearchHelper {
 
          // final UnitApplicationVariable uav = (UnitApplicationVariable) unitApplication;
 
-         final Assignment match = this.createFixedAssignment(unitApplication.getUnit(),
+         final Assignment match = this.createFixedAssignment(unitApplication.getUnitName(),
                unitApplication.getParamValues());
          final ITransformationVariable application = createApplication(searchGraph, match);
 
@@ -487,8 +487,9 @@ public class SearchHelper {
       return solution;
    }
 
-   protected Assignment createFixedAssignment(final Unit unit, final Map<String, Object> valueMapping) {
+   protected Assignment createFixedAssignment(final String unitName, final Map<String, Object> valueMapping) {
       Assignment assignment = null;
+      final Unit unit = getUnits().stream().filter(u -> u.getName().compareTo(unitName) == 0).findFirst().get();
       if(unit instanceof Rule) {
          assignment = InterpreterFactory.INSTANCE.createMatch((Rule) unit, false);
       } else {
@@ -643,14 +644,14 @@ public class SearchHelper {
 
       final Unit chosenUnit = this.getModuleManager().getUnitFromAll(ruleName);
 
-      Assignment match = this.createFixedAssignment(chosenUnit, parameterValues);
+      Assignment match = this.createFixedAssignment(chosenUnit.getName(), parameterValues);
       ITransformationVariable application = createApplication(searchGraph, match);
 
       if(application.execute(getMonitor())) {
          return clean(application);
       }
 
-      match = this.createFixedAssignment(chosenUnit, parameterValues);
+      match = this.createFixedAssignment(chosenUnit.getName(), parameterValues);
       application = createApplication(searchGraph, match);
 
       if(application.execute(getMonitor())) {
@@ -668,6 +669,7 @@ public class SearchHelper {
       // choose a unit randomly
       final List<? extends Unit> units = new ArrayList<>(getUnits());
       Unit chosenUnit = CollectionUtil.getRandomElement(units);
+
       final String n = chosenUnit.getName();
 
       // try to apply rule until match is found or maxRuleTries is reached

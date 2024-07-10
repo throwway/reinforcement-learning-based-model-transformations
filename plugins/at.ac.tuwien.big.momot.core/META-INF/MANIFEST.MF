@@ -12,8 +12,8 @@ Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.9.100,4.0.0)",
  com.google.inject;bundle-version="3.0.0",
  javax.inject;bundle-version="1.0.0",
  org.eclipse.ocl.ecore;bundle-version="3.6.0",
- deeplearning4j.rl.libs;bundle-version="1.0.0",
- org.eclipse.emf.henshin.statespace
+ org.eclipse.emf.henshin.statespace,
+ deeplearning4j.rl.libs
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: at.ac.tuwien.big.momot,
  at.ac.tuwien.big.momot.learning.dsutils,
@@ -32,7 +32,6 @@ Export-Package: at.ac.tuwien.big.momot,
  at.ac.tuwien.big.momot.search.algorithm.reinforcement.algorithm,
  at.ac.tuwien.big.momot.search.algorithm.reinforcement.datastructures,
  at.ac.tuwien.big.momot.search.algorithm.reinforcement.domain,
- at.ac.tuwien.big.momot.search.algorithm.reinforcement.domain.strategies,
  at.ac.tuwien.big.momot.search.algorithm.reinforcement.environment,
  at.ac.tuwien.big.momot.search.engine,
  at.ac.tuwien.big.momot.search.engine.script,

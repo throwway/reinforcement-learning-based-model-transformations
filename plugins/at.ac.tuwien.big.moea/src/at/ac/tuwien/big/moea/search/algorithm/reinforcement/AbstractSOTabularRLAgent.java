@@ -33,7 +33,8 @@ public abstract class AbstractSOTabularRLAgent<S extends Solution> extends Abstr
       this.meanRewardEarned = new ArrayList<>();
 
       if(this.qTableIn != null) {
-         this.qTable = this.utils.loadSOQTable(qTableIn, environment.getUnitMapping());
+         // this.qTable = this.utils.loadSOQTable(qTableIn, environment.getUnitMapping());
+         throw new RuntimeException("Check this out!");
       } else {
          this.qTable = this.utils.initSOQTable(environment.getUnitMapping());
          this.qTable.addStateIfNotExists(new ArrayList<>());

@@ -55,7 +55,9 @@ public class ParetoQLearning<S extends Solution> extends AbstractMOTabularRLAgen
       this.localSearchStrategy = localSearchStrategy;
 
       if(this.qTableIn != null) {
-         this.qTable = this.utils.loadParetoQTable(qTableIn, environment.getUnitMapping());
+         // this.qTable = this.utils.loadParetoQTable(qTableIn, environment.getUnitMapping());
+         throw new RuntimeException("Check this out!");
+
       } else {
          this.qTable = this.utils.initParetoQTable(environment.getUnitMapping());
          this.qTable.addStateIfNotExists(new ArrayList<>());

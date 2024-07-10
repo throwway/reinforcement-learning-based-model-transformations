@@ -50,6 +50,14 @@ public class MOQTable<S, A> extends QTable<S, A, double[]> implements IMOQTableA
    }
 
    @Override
+   public void clear() {
+      // for(final Map<A, double[]> s : this.table.values()) {
+      // s.clear();
+      // }
+      this.table.clear();
+   }
+
+   @Override
    public boolean containsKey(final S s) {
       final S mState = this.stateModifier != null ? this.stateModifier.modify(s) : s;
 

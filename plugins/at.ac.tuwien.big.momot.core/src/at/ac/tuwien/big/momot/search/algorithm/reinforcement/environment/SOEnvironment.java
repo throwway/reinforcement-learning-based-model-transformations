@@ -14,7 +14,6 @@ import at.ac.tuwien.big.momot.search.fitness.IEGraphMultiDimensionalFitnessFunct
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.emf.henshin.interpreter.RuleApplication;
 import org.moeaframework.core.Solution;
 import org.nd4j.linalg.api.ndarray.INDArray;
 
@@ -38,8 +37,7 @@ public class SOEnvironment<S extends Solution> extends AbstractEnvironment<S> im
    private double determineReward(final S state) {
       if(this.rewardStrategy != null && this.rewardStrategy.getRewardMap() != null) {
 
-         return this.determineRewardByTransformations(this.utils.getApplicationStatesDiff(currentState, state))
-               + this.rewardStrategy.determineAdditionalReward(currentState, state);
+         return this.rewardStrategy.determineAdditionalReward(currentState, state);
       }
       return this.determineRewardByFitnessFunction(state);
    }
@@ -50,19 +48,19 @@ public class SOEnvironment<S extends Solution> extends AbstractEnvironment<S> im
       return curObj - prevObj;
    }
 
-   private double determineRewardByTransformations(final List<IApplicationState> ruleAssignments) {
-      double reward = 0;
-      for(final IApplicationState actionRule : ruleAssignments) {
-         final String ruleName = actionRule.getUnit().getName();
-         for(final RuleApplication rule : actionRule.getAppliedRules()) {
-            if(rewardStrategy.getRewardMap().containsKey(rule.getRule().getName())) {
-               reward += rewardStrategy.getRewardMap().get(rule.getRule().getName());
-            }
-         }
-      }
-
-      return reward;
-   }
+   // private double determineRewardByTransformations(final List<IApplicationState> ruleAssignments) {
+   // double reward = 0;
+   // for(final IApplicationState actionRule : ruleAssignments) {
+   // final String ruleName = actionRule.getUnitName();
+   // for(final RuleApplication rule : actionRule.getAppliedRules()) {
+   // if(rewardStrategy.getRewardMap().containsKey(rule.getRule().getName())) {
+   // reward += rewardStrategy.getRewardMap().get(rule.getRule().getName());
+   // }
+   // }
+   // }
+   //
+   // return reward;
+   // }
 
    @Override
    public String getFunctionName() {

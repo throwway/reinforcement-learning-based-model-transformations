@@ -16,8 +16,8 @@ import org.moeaframework.core.Solution;
 public abstract class AbstractTabularRLAgent<S extends Solution> extends AbstractRLAgent<S> {
 
    protected long startTime;
-   protected final List<Double> framesList;
-   protected final List<Double> timePassedList;
+   protected List<Double> framesList;
+   protected List<Double> timePassedList;
    protected S currentSolution;
    protected int iterations = 0;
    protected IRLUtils<S> utils;

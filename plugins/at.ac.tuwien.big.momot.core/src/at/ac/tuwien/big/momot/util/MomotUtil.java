@@ -133,7 +133,7 @@ public final class MomotUtil {
 
       for(final Parameter p : assignment.getUnit().getParameters()) {
          if(assignment.getParameterValue(p) != null) {
-            paramValues.put(p.getName(), assignment.getParameterValue(p));
+            paramValues.put(new String(p.getName()), newInstanceOf(assignment.getParameterValue(p)));
          }
       }
 
@@ -146,7 +146,7 @@ public final class MomotUtil {
       for(final RuleApplication ra : raps) {
          for(final Parameter p : ra.getUnit().getParameters()) {
             if(ra.getPartialMatch().getParameterValue(p) != null) {
-               paramValues.put(p.getName(), ra.getPartialMatch().getParameterValue(p));
+               paramValues.put(new String(p.getName()), newInstanceOf(ra.getPartialMatch().getParameterValue(p)));
             }
          }
 
@@ -169,6 +169,18 @@ public final class MomotUtil {
 
    public static EGraph loadGraph(final String resourceUri) {
       return loadGraph(createResourceSet(), resourceUri);
+   }
+
+   public static Object newInstanceOf(final Object obj) {
+      if(obj instanceof Integer) {
+         return new Integer((Integer) obj);
+      } else if(obj instanceof Double) {
+         return new Double((Double) obj);
+      } else if(obj instanceof String) {
+         return new String((String) obj);
+      } else {
+         throw new IllegalArgumentException("Unsupported type: " + obj.getClass().getName());
+      }
    }
 
    public static void saveGraph(final EGraph graph, final String targetResourceUri) {

@@ -4,6 +4,8 @@ import java.util.Map;
 
 public interface IMOQTableAccessor<S, A> extends IQTableAccessor<S, A> {
 
+   public void clear();
+
    public boolean containsKey(final S s);
 
    public Map<A, double[]> getActionMap(final S s);

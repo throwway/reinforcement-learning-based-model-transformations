@@ -6,23 +6,17 @@ import at.ac.tuwien.big.momot.problem.solution.variable.UnitApplicationVariable;
 import at.ac.tuwien.big.momot.util.MomotUtil;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.eclipse.emf.henshin.interpreter.RuleApplication;
 import org.eclipse.emf.henshin.interpreter.UnitApplication;
-import org.eclipse.emf.henshin.model.Unit;
 
 @JsonIgnoreProperties(value = { "unit, appliedRuless" })
 public class ApplicationState implements Serializable, IApplicationState {
@@ -34,39 +28,29 @@ public class ApplicationState implements Serializable, IApplicationState {
 
    public static ApplicationState of(final UnitApplication ua) {
       Map<String, Object> paramValues = new HashMap<>();
-      final List<RuleApplication> appliedRules = new ArrayList<>();
       if(ua instanceof UnitApplicationVariable) {
          paramValues = MomotUtil.extractParameters(((UnitApplicationVariable) ua).getAssignment());
-         appliedRules.addAll(((UnitApplicationVariable) ua).getAppliedRules());
       } else if(ua instanceof RuleApplicationVariable) {
          final RuleApplicationVariable[] rarr = { (RuleApplicationVariable) ua };
          paramValues = MomotUtil.extractParameters(rarr);
       }
 
-      return new ApplicationState(ua.getUnit(), paramValues, appliedRules);
+      return new ApplicationState(ua.getUnit().getName(), paramValues);
    }
 
    private Map<String, Object> paramValues;
    private String unitName;
-   @JsonIgnore
-   private transient Unit unit;
-   @JsonIgnore
-   private transient List<RuleApplication> appliedRules;
 
    private transient int hashCode;
 
    public ApplicationState() {
       this.unitName = null;
-      this.unit = null;
       this.paramValues = new HashMap<>();
    }
 
-   public ApplicationState(final Unit unit, final Map<String, Object> paramValues,
-         final List<RuleApplication> appliedRules) {
-      this.unit = unit;
-      this.unitName = unit.getName();
+   public ApplicationState(final String unitName, final Map<String, Object> paramValues) {
+      this.unitName = unitName;
       this.paramValues = paramValues;
-      this.appliedRules = appliedRules;
    }
 
    @Override
@@ -86,19 +70,9 @@ public class ApplicationState implements Serializable, IApplicationState {
    }
 
    @Override
-   public List<RuleApplication> getAppliedRules() {
-      return appliedRules;
-   }
-
-   @Override
    @JsonAnyGetter
    public Map<String, Object> getParamValues() {
       return paramValues;
-   }
-
-   @Override
-   public Unit getUnit() {
-      return unit;
    }
 
    @Override
@@ -127,17 +101,8 @@ public class ApplicationState implements Serializable, IApplicationState {
 
    }
 
-   public void setAppliedRules(final List<RuleApplication> appliedRules) {
-      this.appliedRules = appliedRules;
-   }
-
    public void setParamValues(final Map<String, Object> paramValues) {
       this.paramValues = paramValues;
-   }
-
-   @Override
-   public void setUnit(final Unit unit) {
-      this.unit = unit;
    }
 
    public void setUnitName(final String unitName) {
@@ -160,8 +125,8 @@ public class ApplicationState implements Serializable, IApplicationState {
 
    }
 
-   private void writeObject(final ObjectOutputStream o) throws IOException {
-      o.writeObject(this.getUnit().getName());
-      o.writeObject(this.getParamValues());
-   }
+   // private void writeObject(final ObjectOutputStream o) throws IOException {
+   // o.writeObject(this.getUnit().getName());
+   // o.writeObject(this.getParamValues());
+   // }
 }
