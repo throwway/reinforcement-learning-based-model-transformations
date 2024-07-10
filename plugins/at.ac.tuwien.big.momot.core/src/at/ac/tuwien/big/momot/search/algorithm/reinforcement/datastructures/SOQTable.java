@@ -61,6 +61,12 @@ public class SOQTable<S, A> extends QTable<S, A, Double> implements ISOQTableAcc
    }
 
    @Override
+   public void clear() {
+      this.table.clear();
+
+   }
+
+   @Override
    public A getMaxRewardAction(final S s) {
       final S mState = this.stateModifier != null ? this.stateModifier.modify(s) : s;
       final A maxRewA = this._getMaxRewardAction(mState);

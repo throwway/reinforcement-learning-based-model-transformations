@@ -85,6 +85,11 @@ public class ParetoQTable<S, A> extends QTable<S, A, ParetoQState> implements IP
    }
 
    @Override
+   public void clear() {
+      this.table.clear();
+   }
+
+   @Override
    public A getActionForCurrentState(final NondominatedPopulation stateQNDP, final S state) {
       final S mState = this.stateModifier != null ? this.stateModifier.modify(state) : state;
       final A maxRewA = this._getActionForCurrentState(stateQNDP, mState);
@@ -121,5 +126,4 @@ public class ParetoQTable<S, A> extends QTable<S, A, ParetoQState> implements IP
       this.table.get(mState).put(mAction, pQState);
 
    }
-
 }

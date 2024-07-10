@@ -18,8 +18,8 @@ public abstract class AbstractSOTabularRLAgent<S extends Solution> extends Abstr
 
    protected ISOQTableAccessor<List<IApplicationState>, List<IApplicationState>> qTable;
 
-   protected final ArrayList<Double> rewardEarned;
-   protected final ArrayList<Double> meanRewardEarned;
+   protected ArrayList<Double> rewardEarned;
+   protected ArrayList<Double> meanRewardEarned;
    protected double cumReward;
 
    public AbstractSOTabularRLAgent(final Problem problem, final ISOEnvironment<S> environment, final String savePath,
@@ -58,6 +58,21 @@ public abstract class AbstractSOTabularRLAgent<S extends Solution> extends Abstr
       lll.add((ArrayList<Double>) secondsPassed);
       FileManager.saveBenchMark("evaluations;reward;averageReward;runtime in ms;", lll,
             scoreSavePath + "_" + FileManager.milliSecondsToFormattedDate(this.startTime) + ".csv");
+   }
+
+   @Override
+   public void terminate() {
+      super.terminate();
+      this.qTable.clear();
+      this.qTable = null;
+      this.rewardEarned = null;
+      this.meanRewardEarned = null;
+      framesList = null;
+      timePassedList = null;
+      this.population = null;
+      this.utils = null;
+      System.out.println("Finalizing CustomAlgorithm...");
+      // Perform any cleanup or final tasks here
    }
 
 }

@@ -1,6 +1,8 @@
 package at.ac.tuwien.big.moea.search.algorithm.reinforcement.datastructures;
 
 public interface ISOQTableAccessor<S, A> extends IQTableAccessor<S, A> {
+   public void clear();
+
    public A getMaxRewardAction(final S s);
 
    public double getMaxRewardValue(final S s);

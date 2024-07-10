@@ -7,6 +7,8 @@ import org.moeaframework.core.Problem;
 
 public interface IParetoQTableAccessor<S, A> extends IQTableAccessor<S, A> {
 
+   public void clear();
+
    public A getActionForCurrentState(final NondominatedPopulation stateQNDP, final S s);
 
    public A getMaxRewardAction(EvaluationStrategy strategy, final S s, final Problem p,

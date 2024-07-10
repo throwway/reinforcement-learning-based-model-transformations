@@ -23,7 +23,7 @@ import org.nd4j.linalg.factory.Nd4j;
 
 public class ParetoQLearning<S extends Solution> extends AbstractMOTabularRLAgent<S> {
 
-   private final IParetoQTableAccessor<List<IApplicationState>, List<IApplicationState>> qTable;
+   private IParetoQTableAccessor<List<IApplicationState>, List<IApplicationState>> qTable;
    private final Map<List<IApplicationState>, NondominatedPopulation> qStateNDP;
 
    private final double gamma; // Eagerness - 0 looks in the near future, 1 looks in the distant future
@@ -149,6 +149,13 @@ public class ParetoQLearning<S extends Solution> extends AbstractMOTabularRLAgen
          currentSolution = nextState;
       }
 
+   }
+
+   @Override
+   public void terminate() {
+      super.terminate();
+      this.qTable.clear();
+      this.qTable = null;
    }
 
    private void updateQSets(final List<IApplicationState> state, final List<IApplicationState> action,
